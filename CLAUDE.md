@@ -48,10 +48,87 @@ datos, GRC y HOPEX/Bizzdesign.
 (Esta estructura se desarrollará en detalle en prompts/sesiones siguientes;
 por ahora es solo contexto de hacia dónde va el proyecto.)
 
+## Modelo de datos
+
+Idiomas: `config/site.php` es la **fuente única de verdad** (`locales`,
+`default_locale`). No escribas `['es','en']` a mano en otros archivos.
+
+### Modelos
+
+| Modelo | Traducible | No traducible |
+|---|---|---|
+| `Service` | title, slug, summary, body | icon, order, is_published |
+| `Project` | title, slug, summary, body | client_name (nombre propio), cover_image, order, is_published |
+| `TeamMember` | role, bio | name (nombre propio), photo, order, is_published |
+| `Post` | title, slug, excerpt, body, category | cover_image, published_at, is_published |
+| `Testimonial` | author_role, quote | author_name (nombre propio), photo, order, is_published |
+| `ContactMessage` | — (lo escriben los visitantes) | name, email, phone, message, locale, read_at |
+| `Page` | title, subtitle, body, sections, meta_* | key, hero_image |
+| `SiteSetting` | address, footer_text, meta_* | company_name, email, phone, whatsapp, social_links |
+
+`Project` ↔ `Service` es muchos a muchos (pivote `project_service`).
+
+### Por qué Page **y** SiteSetting (no uno solo)
+
+Son dos formas distintas de dato y por eso son dos tablas:
+
+- **`Page`** = contenido de una página concreta (Inicio, Nosotros, Contacto).
+  Varias filas, una por página, identificadas por `key` inmutable
+  (`home`, `about`, `contact`). Las URLs las definen las rutas, no la base de
+  datos, así que la persona editora cambia textos sin poder romper la
+  navegación. Tiene `sections` (JSON traducible) para bloques flexibles.
+- **`SiteSetting`** = datos globales que se repiten en TODAS las páginas
+  (teléfono, correo, dirección, redes, texto del pie). Una sola fila,
+  `SiteSetting::current()`.
+
+Meter el teléfono dentro de la página "Contacto" obligaría al pie de página
+—que aparece en todo el sitio— a cargar esa página; y meter los cuerpos de
+texto en settings haría crecer la tabla sin límite.
+
+### Slugs traducibles
+
+Se guardan en columna JSON: `{"es": "gobierno-de-datos", "en": "data-governance"}`.
+
+La **unicidad por idioma la garantiza MySQL** con columnas generadas
+(`slug_es`, `slug_en`) más índice único. Si un idioma no está traducido el
+valor es NULL y en MySQL varios NULL no chocan, así que puede haber varios
+registros sin traducir al inglés.
+
+⚠️ **Si algún día se agrega un idioma**: además de `config/site.php` hay que
+crear una migración que añada la columna generada `slug_<locale>` a
+`services`, `projects` y `posts`.
+
+Las consultas usan la ruta JSON (`slug->es`), no esas columnas, para no
+romperse si la config y las migraciones quedan desfasadas.
+
+### Traits reutilizables (`app/Models/Concerns/`)
+
+- `HasTranslatableSlug` — resolución por slug + idioma. Métodos clave:
+  `findBySlug($slug, $locale)` (estricto, para las rutas),
+  `findBySlugInAnyLocale($slug)` (para redirigir a la URL canónica cuando
+  alguien llega con el slug del otro idioma), `slugFor($locale)`,
+  `generateMissingSlugs()`, y los scopes `whereSlug()` / `translatedIn()`.
+  `getRouteKey()` cae al idioma por defecto si falta la traducción, para que
+  las URLs generadas nunca queden vacías.
+- `Publishable` — scopes `published()` / `draft()`. `Post` lo sobrescribe
+  para excluir además las entradas con `published_at` futura.
+- `Sortable` — scope `ordered()` según la columna `order`.
+
+## Pruebas
+
+Las pruebas corren contra **MySQL** (`portalgrupoedima_testing`), no contra
+SQLite en memoria: el esquema usa columnas generadas con funciones JSON de
+MySQL que SQLite no soporta. Esa base debe existir localmente.
+
+`tests/Feature/TranslatableContentTest.php` cubre el comportamiento bilingüe
+(resolución por idioma, unicidad de slugs, respaldo de traducción, scopes de
+publicación).
+
 ## Entorno local
 
 - Laragon (Windows), PHP 8.3, MySQL vía Laragon.
 - Base de datos local: `portalgrupoedima` (MySQL, utf8mb4).
+- Base de datos de pruebas: `portalgrupoedima_testing` (MySQL, utf8mb4).
 - Servidor de desarrollo: `php artisan serve` → http://localhost:8000
   (o el vhost de Laragon si se configura, típicamente
   http://portalgrupoedima.test).

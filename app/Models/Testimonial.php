@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Concerns\Publishable;
+use App\Models\Concerns\Sortable;
+use Database\Factories\TestimonialFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\Attributes\Translatable;
+use Spatie\Translatable\HasTranslations;
+
+/**
+ * Testimonio de un cliente.
+ *
+ * `author_name` es un nombre propio y por eso no es traducible.
+ */
+#[Translatable(['author_role', 'quote'])]
+#[Fillable(['author_name', 'author_role', 'quote', 'photo', 'order', 'is_published'])]
+class Testimonial extends Model
+{
+    /** @use HasFactory<TestimonialFactory> */
+    use HasFactory, HasTranslations, Publishable, Sortable;
+
+    protected function casts(): array
+    {
+        return [
+            'order' => 'integer',
+            'is_published' => 'boolean',
+        ];
+    }
+}
