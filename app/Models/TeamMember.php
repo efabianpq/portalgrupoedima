@@ -22,7 +22,7 @@ use Spatie\Translatable\HasTranslations;
  * biografía sí lo son.
  */
 #[Translatable(['role', 'bio'])]
-#[Fillable(['name', 'role', 'bio', 'photo', 'order', 'is_published'])]
+#[Fillable(['name', 'role', 'bio', 'order', 'is_published'])]
 class TeamMember extends Model implements HasMedia
 {
     /** @use HasFactory<TeamMemberFactory> */

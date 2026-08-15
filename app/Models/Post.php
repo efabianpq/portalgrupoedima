@@ -20,7 +20,7 @@ use Spatie\Translatable\HasTranslations;
  * Entrada de blog / noticia.
  */
 #[Translatable(['title', 'slug', 'excerpt', 'body', 'category'])]
-#[Fillable(['title', 'slug', 'excerpt', 'body', 'category', 'cover_image', 'published_at', 'is_published'])]
+#[Fillable(['title', 'slug', 'excerpt', 'body', 'category', 'published_at', 'is_published'])]
 class Post extends Model implements HasMedia
 {
     /** @use HasFactory<PostFactory> */

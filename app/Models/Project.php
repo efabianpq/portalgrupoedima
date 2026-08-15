@@ -23,7 +23,7 @@ use Spatie\Translatable\HasTranslations;
  * `client_name` es un nombre propio y por eso no es traducible.
  */
 #[Translatable(['title', 'slug', 'summary', 'body'])]
-#[Fillable(['title', 'slug', 'summary', 'body', 'client_name', 'cover_image', 'order', 'is_published'])]
+#[Fillable(['title', 'slug', 'summary', 'body', 'client_name', 'order', 'is_published'])]
 class Project extends Model implements HasMedia
 {
     /** @use HasFactory<ProjectFactory> */

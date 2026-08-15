@@ -21,7 +21,7 @@ use Spatie\Translatable\HasTranslations;
  * `author_name` es un nombre propio y por eso no es traducible.
  */
 #[Translatable(['author_role', 'quote'])]
-#[Fillable(['author_name', 'author_role', 'quote', 'photo', 'order', 'is_published'])]
+#[Fillable(['author_name', 'author_role', 'quote', 'order', 'is_published'])]
 class Testimonial extends Model implements HasMedia
 {
     /** @use HasFactory<TestimonialFactory> */
