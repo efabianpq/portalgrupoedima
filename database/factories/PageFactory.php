@@ -35,7 +35,6 @@ class PageFactory extends Factory
                 'en' => '<p>'.implode('</p><p>', fake('en_US')->paragraphs(3)).'</p>',
             ],
             'sections' => null,
-            'hero_image' => null,
             'meta_title' => [
                 'es' => fake('es_ES')->sentence(6),
                 'en' => fake('en_US')->sentence(6),

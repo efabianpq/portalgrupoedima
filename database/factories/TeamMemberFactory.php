@@ -38,7 +38,6 @@ class TeamMemberFactory extends Factory
                 'es' => fake('es_ES')->paragraph(4),
                 'en' => fake('en_US')->paragraph(4),
             ],
-            'photo' => null,
             'order' => $index,
             'is_published' => true,
         ];

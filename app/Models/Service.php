@@ -5,11 +5,15 @@ namespace App\Models;
 use App\Models\Concerns\HasTranslatableSlug;
 use App\Models\Concerns\Publishable;
 use App\Models\Concerns\Sortable;
+use App\Support\ImageConversions;
 use Database\Factories\ServiceFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\Attributes\Translatable;
 use Spatie\Translatable\HasTranslations;
 
@@ -19,10 +23,13 @@ use Spatie\Translatable\HasTranslations;
  */
 #[Translatable(['title', 'slug', 'summary', 'body'])]
 #[Fillable(['title', 'slug', 'summary', 'body', 'icon', 'order', 'is_published'])]
-class Service extends Model
+class Service extends Model implements HasMedia
 {
     /** @use HasFactory<ServiceFactory> */
-    use HasFactory, HasTranslatableSlug, HasTranslations, Publishable, Sortable;
+    use HasFactory, HasTranslatableSlug, HasTranslations, InteractsWithMedia, Publishable, Sortable;
+
+    /** Colección de imagen de la tarjeta del servicio. */
+    public const IMAGE = 'imagen';
 
     protected function casts(): array
     {
@@ -30,6 +37,16 @@ class Service extends Model
             'order' => 'integer',
             'is_published' => 'boolean',
         ];
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection(self::IMAGE)->singleFile();
+    }
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        ImageConversions::register($this);
     }
 
     /**

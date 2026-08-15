@@ -114,6 +114,52 @@ romperse si la config y las migraciones quedan desfasadas.
   para excluir además las entradas con `published_at` futura.
 - `Sortable` — scope `ordered()` según la columna `order`.
 
+## Panel de administración (Filament)
+
+### Campos traducibles: sin plugin, a propósito
+
+Las pestañas "Español / English" se arman con componentes nativos de Filament
+(`app/Filament/Support/TranslatableTabs.php`), no con un plugin. Razones:
+
+- El plugin oficial `filament/spatie-laravel-translatable-plugin` está
+  **abandonado** (remite a `lara-zeus/spatie-translatable`), y además usa un
+  selector de idioma que obliga a guardar dos veces — fácil olvidar el inglés.
+- `outerweb/filament-translatable-fields` v4 exige Filament v4/v5 y PHP 8.4;
+  este proyecto va en Filament v3 y PHP 8.3.
+- Filament rellena el formulario desde `attributesToArray()`, que con spatie
+  ya devuelve `['es' => ..., 'en' => ...]`. Por eso basta con nombrar los
+  campos `title.es` / `title.en`: el viaje de ida y vuelta funciona solo.
+
+Resultado: cero dependencias que se puedan abandonar, control total de las
+etiquetas en español y migración trivial cuando se pase a Filament v4/v5.
+
+### Convenciones del panel
+
+- Todos los Resources con slug declaran `$recordRouteKeyName = 'id'`. Sin eso
+  Filament resolvería los registros por `slug` (porque el trait
+  `HasTranslatableSlug` cambia `getRouteKeyName()`) y las URLs del panel se
+  romperían al cambiar un slug.
+- Sólo el idioma por defecto es obligatorio en los formularios: el contenido
+  puede quedar sin traducir al inglés sin bloquear el guardado.
+- El slug se autogenera desde el título **sólo al crear**; al editar se
+  respeta para no romper enlaces ya publicados. Como red de seguridad, el
+  trait rellena en `saving` cualquier slug que falte.
+- Helpers compartidos en `app/Filament/Support/`: `TranslatableTabs`,
+  `ContentFields` (título, slug, editor enriquecido, imagen, publicado) y
+  `ContentColumns` (columna traducible, ícono de publicado, miniatura).
+- Grupos del menú: **Contenido del sitio** (páginas, servicios, proyectos,
+  equipo, blog, testimonios) y **Administración** (mensajes, configuración).
+
+### Imágenes
+
+`spatie/laravel-medialibrary` con el plugin oficial de Filament. Las
+conversiones (`miniatura` 400×400, `web` máx. 1600×1200) se declaran
+`nonQueued()` **a propósito**: Hostinger es hosting compartido sin workers de
+colas, así que deben generarse al subir la imagen.
+
+Las columnas `cover_image` / `photo` / `hero_image` se eliminaron: con Media
+Library las imágenes no necesitan columna propia.
+
 ## Pruebas
 
 Las pruebas corren contra **MySQL** (`portalgrupoedima_testing`), no contra
@@ -123,6 +169,15 @@ MySQL que SQLite no soporta. Esa base debe existir localmente.
 `tests/Feature/TranslatableContentTest.php` cubre el comportamiento bilingüe
 (resolución por idioma, unicidad de slugs, respaldo de traducción, scopes de
 publicación).
+
+`tests/Feature/PanelAdminTest.php` cubre el panel: que cada recurso cargue,
+que se pueda crear contenido en los dos idiomas, que el slug repetido avise,
+y que los mensajes de contacto sean de sólo lectura.
+
+⚠️ `SiteSetting::current()` memoriza la fila en una propiedad estática que
+vive **por petición**. En las pruebas hay que llamar
+`SiteSetting::forgetCurrent()` en el `setUp`, o quedaría apuntando a la fila
+de la prueba anterior.
 
 ## Entorno local
 

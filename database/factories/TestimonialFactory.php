@@ -37,7 +37,6 @@ class TestimonialFactory extends Factory
                 'es' => fake('es_ES')->paragraph(3),
                 'en' => fake('en_US')->paragraph(3),
             ],
-            'photo' => null,
             'order' => $index,
             'is_published' => true,
         ];

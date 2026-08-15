@@ -26,6 +26,18 @@ use Spatie\Translatable\HasTranslations;
 trait HasTranslatableSlug
 {
     /**
+     * Red de seguridad: antes de guardar, rellena los slugs que falten a
+     * partir del título de cada idioma. Así nunca queda un registro sin slug,
+     * venga del panel, de un seeder o de la migración de WordPress.
+     */
+    public static function bootHasTranslatableSlug(): void
+    {
+        static::saving(function (self $model) {
+            $model->generateMissingSlugs();
+        });
+    }
+
+    /**
      * Atributo traducible del que se genera el slug.
      */
     public function slugSource(): string
@@ -147,7 +159,10 @@ trait HasTranslatableSlug
      */
     public function generateSlugFor(string $locale): static
     {
-        $source = $this->getTranslation($this->slugSource(), $locale, useFallbackLocale: true);
+        // Sin idioma de respaldo a propósito: si no hay título en ese idioma,
+        // el contenido no está traducido y no debe tener slug en ese idioma
+        // (un slug en español dentro del sitio en inglés sería peor que nada).
+        $source = $this->getTranslation($this->slugSource(), $locale, useFallbackLocale: false);
 
         if (blank($source)) {
             return $this;

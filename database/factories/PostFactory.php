@@ -52,7 +52,6 @@ class PostFactory extends Factory
                 'es' => $category['es'],
                 'en' => $category['en'],
             ],
-            'cover_image' => null,
             'published_at' => fake()->dateTimeBetween('-2 years', 'now'),
             'is_published' => true,
         ];

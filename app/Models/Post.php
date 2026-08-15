@@ -4,11 +4,15 @@ namespace App\Models;
 
 use App\Models\Concerns\HasTranslatableSlug;
 use App\Models\Concerns\Publishable;
+use App\Support\ImageConversions;
 use Database\Factories\PostFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Translatable\Attributes\Translatable;
 use Spatie\Translatable\HasTranslations;
 
@@ -17,10 +21,13 @@ use Spatie\Translatable\HasTranslations;
  */
 #[Translatable(['title', 'slug', 'excerpt', 'body', 'category'])]
 #[Fillable(['title', 'slug', 'excerpt', 'body', 'category', 'cover_image', 'published_at', 'is_published'])]
-class Post extends Model
+class Post extends Model implements HasMedia
 {
     /** @use HasFactory<PostFactory> */
-    use HasFactory, HasTranslatableSlug, HasTranslations, Publishable;
+    use HasFactory, HasTranslatableSlug, HasTranslations, InteractsWithMedia, Publishable;
+
+    /** Colección de imagen de portada de la entrada. */
+    public const COVER = 'portada';
 
     protected function casts(): array
     {
@@ -28,6 +35,16 @@ class Post extends Model
             'published_at' => 'datetime',
             'is_published' => 'boolean',
         ];
+    }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection(self::COVER)->singleFile();
+    }
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        ImageConversions::register($this);
     }
 
     /**

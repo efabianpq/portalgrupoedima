@@ -89,7 +89,9 @@ class TranslatableContentTest extends TestCase
 
     public function test_la_url_cae_al_idioma_por_defecto_si_falta_la_traduccion(): void
     {
+        // Sin título en inglés no se genera slug en inglés.
         $service = Service::factory()->create([
+            'title' => ['es' => 'Gobierno de datos'],
             'slug' => ['es' => 'gobierno-de-datos'],
         ]);
 
@@ -119,8 +121,8 @@ class TranslatableContentTest extends TestCase
 
     public function test_varios_registros_pueden_quedar_sin_traducir_al_ingles(): void
     {
-        Service::factory()->create(['slug' => ['es' => 'servicio-uno']]);
-        Service::factory()->create(['slug' => ['es' => 'servicio-dos']]);
+        Service::factory()->create(['title' => ['es' => 'Uno'], 'slug' => ['es' => 'servicio-uno']]);
+        Service::factory()->create(['title' => ['es' => 'Dos'], 'slug' => ['es' => 'servicio-dos']]);
 
         // Los NULL de la columna generada slug_en no chocan entre sí.
         $this->assertSame(2, Service::count());
@@ -129,7 +131,7 @@ class TranslatableContentTest extends TestCase
     public function test_filtra_el_contenido_traducido_en_un_idioma(): void
     {
         Service::factory()->create(['slug' => ['es' => 'con-ingles', 'en' => 'with-english']]);
-        Service::factory()->create(['slug' => ['es' => 'sin-ingles']]);
+        Service::factory()->create(['title' => ['es' => 'Sin inglés'], 'slug' => ['es' => 'sin-ingles']]);
 
         $this->assertSame(2, Service::query()->translatedIn('es')->count());
         $this->assertSame(1, Service::query()->translatedIn('en')->count());
@@ -147,6 +149,18 @@ class TranslatableContentTest extends TestCase
         // Respeta el slug español que ya existía y crea el inglés que faltaba.
         $this->assertSame('temporal', $service->getTranslation('slug', 'es'));
         $this->assertSame('information-architecture', $service->getTranslation('slug', 'en'));
+    }
+
+    public function test_al_guardar_rellena_solo_los_slugs_que_falten(): void
+    {
+        $service = Service::factory()->create([
+            'title' => ['es' => 'Gestión de procesos', 'en' => 'Process Management'],
+            'slug' => ['es' => 'slug-escrito-a-mano'],
+        ]);
+
+        // Respeta el slug español escrito a mano y genera el inglés que faltaba.
+        $this->assertSame('slug-escrito-a-mano', $service->getTranslation('slug', 'es'));
+        $this->assertSame('process-management', $service->getTranslation('slug', 'en'));
     }
 
     public function test_al_generar_un_slug_repetido_le_agrega_un_sufijo(): void

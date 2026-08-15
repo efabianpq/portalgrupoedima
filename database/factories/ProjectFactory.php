@@ -38,7 +38,6 @@ class ProjectFactory extends Factory
                 'en' => '<p>'.implode('</p><p>', fake('en_US')->paragraphs(3)).'</p>',
             ],
             'client_name' => fake()->company(),
-            'cover_image' => null,
             'order' => $index,
             'is_published' => true,
         ];
