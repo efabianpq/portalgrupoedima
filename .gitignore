@@ -25,3 +25,5 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+# Archivos temporales de bloqueo de Word/Office (se crean al abrir un .docx)
+~$*
