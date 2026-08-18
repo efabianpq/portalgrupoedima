@@ -19,6 +19,7 @@ class SiteContentSeeder extends Seeder
     {
         $titulos = [
             Page::HOME => ['es' => 'Inicio', 'en' => 'Home'],
+            Page::HOPEX => ['es' => 'La plataforma HOPEX', 'en' => 'The HOPEX platform'],
             Page::ABOUT => ['es' => 'Nosotros', 'en' => 'About us'],
             Page::CONTACT => ['es' => 'Contacto', 'en' => 'Contact'],
         ];

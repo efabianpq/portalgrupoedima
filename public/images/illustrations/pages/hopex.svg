@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <!-- Repositorio único: un centro conectado a los dominios que reúne (aplicaciones, procesos, riesgo, tecnología). -->
+  <g stroke="#046380" stroke-width="3" fill="none">
+    <path d="M200 150 L140 100"/>
+    <path d="M200 150 L260 100"/>
+    <path d="M200 150 L140 200"/>
+    <path d="M200 150 L260 200"/>
+  </g>
+  <circle cx="200" cy="150" r="22" fill="#046380"/>
+  <circle cx="200" cy="150" r="9" fill="#FFFFFF"/>
+  <g fill="#0A7CB8">
+    <circle cx="140" cy="100" r="11"/>
+    <circle cx="260" cy="100" r="11"/>
+  </g>
+  <g fill="#FAA92E">
+    <circle cx="140" cy="200" r="11"/>
+    <circle cx="260" cy="200" r="11"/>
+  </g>
+</svg>

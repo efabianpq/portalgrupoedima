@@ -4,18 +4,22 @@ namespace Tests\Feature;
 
 use App\Filament\Pages\SiteSettings;
 use App\Filament\Resources\ContactMessageResource;
+use App\Filament\Resources\MenuItemResource;
 use App\Filament\Resources\PageResource;
 use App\Filament\Resources\PostResource;
 use App\Filament\Resources\ProjectResource;
 use App\Filament\Resources\ServiceResource;
+use App\Filament\Resources\SolutionResource;
 use App\Filament\Resources\TeamMemberResource;
 use App\Filament\Resources\TestimonialResource;
 use App\Models\ContactMessage;
+use App\Models\MenuItem;
 use App\Models\Page;
 use App\Models\Post;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\SiteSetting;
+use App\Models\Solution;
 use App\Models\TeamMember;
 use App\Models\Testimonial;
 use App\Models\User;
@@ -46,6 +50,8 @@ class PanelAdminTest extends TestCase
     public static function recursos(): array
     {
         return [
+            'menú del sitio' => [MenuItemResource::class],
+            'soluciones' => [SolutionResource::class],
             'servicios' => [ServiceResource::class],
             'proyectos' => [ProjectResource::class],
             'equipo' => [TeamMemberResource::class],
@@ -69,6 +75,8 @@ class PanelAdminTest extends TestCase
     public function test_los_formularios_de_creacion_cargan_sin_errores(): void
     {
         $paginasDeCreacion = [
+            MenuItemResource::class,
+            SolutionResource::class,
             ServiceResource::class,
             ProjectResource::class,
             TeamMemberResource::class,
@@ -208,6 +216,43 @@ class PanelAdminTest extends TestCase
 
         $this->assertSame('Banco de Bogotá', $proyecto->client_name);
         $this->assertTrue($proyecto->services->contains($servicio));
+    }
+
+    public function test_crea_un_item_de_menu_en_los_dos_idiomas(): void
+    {
+        Livewire::test(MenuItemResource::getPages()['create']->getPage())
+            ->fillForm([
+                'label' => ['es' => 'Nosotros', 'en' => 'About us'],
+                'url' => ['es' => '/es/nosotros', 'en' => '/en/about-us'],
+                'is_published' => true,
+            ])
+            ->call('create')
+            ->assertHasNoFormErrors();
+
+        $item = MenuItem::query()->firstOrFail();
+
+        $this->assertSame('Nosotros', $item->getTranslation('label', 'es'));
+        $this->assertSame('/en/about-us', $item->getTranslation('url', 'en'));
+        $this->assertTrue($item->is_published);
+    }
+
+    public function test_la_solucion_puede_relacionarse_con_servicios(): void
+    {
+        $servicio = Service::factory()->create();
+
+        Livewire::test(SolutionResource::getPages()['create']->getPage())
+            ->fillForm([
+                'title' => ['es' => 'Gobierno de datos', 'en' => 'Data Governance'],
+                'services' => [$servicio->getKey()],
+                'is_published' => true,
+            ])
+            ->call('create')
+            ->assertHasNoFormErrors();
+
+        $solucion = Solution::query()->firstOrFail();
+
+        $this->assertSame('Gobierno de datos', $solucion->getTranslation('title', 'es'));
+        $this->assertTrue($solucion->services->contains($servicio));
     }
 
     public function test_las_paginas_institucionales_se_editan_pero_no_se_crean(): void

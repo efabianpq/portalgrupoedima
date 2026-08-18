@@ -3,7 +3,102 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+/**
+ * Tokens de marca — Grupo Edima.
+ * Traducidos 1:1 desde resources/Paleta_de_marca_Edima/tailwind.config.js
+ * (formato Tailwind v3) a la sintaxis de tema en CSS de Tailwind v4.
+ * No cambiar valores aquí sin actualizar también ese archivo de referencia.
+ */
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-heading: 'Lora', Georgia, Cambria, 'Times New Roman', serif;
+    --font-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+    --color-brand-primary-50: #F2F6F7;
+    --color-brand-primary-100: #DDEAEE;
+    --color-brand-primary-200: #AFD8E4;
+    --color-brand-primary-300: #6CC5E0;
+    --color-brand-primary-400: #19B6E6;
+    --color-brand-primary-500: #0C96C0;
+    --color-brand-primary-600: #07799C;
+    --color-brand-primary-700: #046380;
+    --color-brand-primary-800: #044458;
+    --color-brand-primary-900: #032A35;
+
+    --color-brand-secondary-50: #F1F6F9;
+    --color-brand-secondary-100: #D7EAF4;
+    --color-brand-secondary-200: #A8D7F0;
+    --color-brand-secondary-300: #71C7F4;
+    --color-brand-secondary-400: #38B7FA;
+    --color-brand-secondary-500: #20B2FF;
+    --color-brand-secondary-600: #069EEF;
+    --color-brand-secondary-700: #0A7CB8;
+    --color-brand-secondary-800: #0B5A84;
+    --color-brand-secondary-900: #093953;
+
+    --color-brand-accent-50: #F9F6F0;
+    --color-brand-accent-100: #F5E9D6;
+    --color-brand-accent-200: #F6D9AC;
+    --color-brand-accent-300: #F8C981;
+    --color-brand-accent-400: #FFBD59;
+    --color-brand-accent-500: #FAA92E;
+    --color-brand-accent-600: #E9910C;
+    --color-brand-accent-700: #AA6C0E;
+
+    --color-brand-neutral-50: #FAF8F5;
+    --color-brand-neutral-100: #F3EFE9;
+    --color-brand-neutral-200: #E7E0D6;
+    --color-brand-neutral-300: #D2C8B9;
+    --color-brand-neutral-400: #A79C89;
+    --color-brand-neutral-500: #7C7360;
+    --color-brand-neutral-600: #5B5347;
+    --color-brand-neutral-700: #423B31;
+    --color-brand-neutral-800: #2B261F;
+    --color-brand-neutral-900: #1B1712;
+
+    --radius-sm: 6px;
+    --radius: 8px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-pill: 999px;
+
+    --shadow-sm: 0 1px 2px 0 rgba(27, 23, 18, 0.06), 0 1px 1px 0 rgba(27, 23, 18, 0.04);
+    --shadow: 0 2px 8px -1px rgba(27, 23, 18, 0.08), 0 1px 3px -1px rgba(27, 23, 18, 0.06);
+    --shadow-md: 0 4px 14px -2px rgba(27, 23, 18, 0.10), 0 2px 6px -2px rgba(27, 23, 18, 0.06);
+    --shadow-lg: 0 12px 28px -6px rgba(27, 23, 18, 0.16), 0 4px 10px -4px rgba(27, 23, 18, 0.08);
+}
+
+/**
+ * Componentes reutilizables — mismos nombres y apariencia que
+ * resources/Paleta_de_marca_Edima/style-guide.html (.btn-primary,
+ * .btn-secondary, .badge, .card), para no inventar un estilo nuevo.
+ */
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center gap-2 rounded bg-brand-primary-700 px-6 py-3 font-body text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-primary-800;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center gap-2 rounded border-[1.5px] border-brand-secondary-500 px-6 py-3 font-body text-sm font-semibold text-brand-primary-700 transition-colors hover:border-brand-primary-700 hover:bg-brand-primary-50;
+    }
+
+    .btn-secondary-inverse {
+        @apply inline-flex items-center gap-2 rounded border-[1.5px] border-white px-6 py-3 font-body text-sm font-semibold text-white transition-colors hover:bg-white/10;
+    }
+
+    .badge {
+        @apply inline-flex items-center gap-1.5 rounded-pill bg-brand-accent-100 px-3.5 py-1.5 font-body text-xs font-bold tracking-wide text-brand-accent-700 uppercase;
+    }
+
+    .badge-alt {
+        @apply inline-flex items-center gap-1.5 rounded-pill bg-brand-secondary-100 px-3.5 py-1.5 font-body text-xs font-bold tracking-wide text-brand-secondary-700 uppercase;
+    }
+
+    .card {
+        @apply overflow-hidden rounded-lg border border-brand-neutral-200 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
 }

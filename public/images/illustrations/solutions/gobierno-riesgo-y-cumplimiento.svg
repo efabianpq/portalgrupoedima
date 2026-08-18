@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1F6F9"/>
+      <stop offset="1" stop-color="#D7EAF4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+
+  <!-- Escudo de control -->
+  <path d="M180 90 L226 108 L226 156 C226 190, 206 210, 180 220 C154 210, 134 190, 134 156 L134 108 Z"
+        fill="#FFFFFF" stroke="#046380" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M160 152 L174 168 L202 132" fill="none" stroke="#FAA92E" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Balanza: cumplimiento equilibrado -->
+  <g stroke="#0A7CB8" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M270 110 L270 190"/>
+    <path d="M240 120 L300 120"/>
+    <path d="M240 120 L226 148 L254 148 Z"/>
+    <path d="M300 120 L286 148 L314 148 Z"/>
+  </g>
+  <path d="M254 190 L286 190" stroke="#0A7CB8" stroke-width="4" stroke-linecap="round"/>
+</svg>

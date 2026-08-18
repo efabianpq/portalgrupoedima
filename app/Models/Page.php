@@ -36,6 +36,9 @@ class Page extends Model implements HasMedia
 
     public const CONTACT = 'contact';
 
+    /** Página informativa sobre la plataforma HOPEX. */
+    public const HOPEX = 'hopex';
+
     /**
      * Las únicas páginas que existen. La persona editora no crea ni borra
      * páginas; sólo edita estas.
@@ -44,7 +47,7 @@ class Page extends Model implements HasMedia
      */
     public static function keys(): array
     {
-        return [self::HOME, self::ABOUT, self::CONTACT];
+        return [self::HOME, self::HOPEX, self::ABOUT, self::CONTACT];
     }
 
     /**
@@ -56,6 +59,7 @@ class Page extends Model implements HasMedia
     {
         return [
             self::HOME => 'Inicio',
+            self::HOPEX => 'Plataforma HOPEX',
             self::ABOUT => 'Nosotros',
             self::CONTACT => 'Contacto',
         ];

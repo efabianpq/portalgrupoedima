@@ -106,7 +106,13 @@ class ServiceResource extends Resource
         return [
             'index' => Pages\ListServices::route('/'),
             'create' => Pages\CreateService::route('/create'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            // ":id" fuerza a Laravel a usar el ID también al GENERAR la URL del
+            // botón "Editar" (route()->getRouteKey() del modelo devuelve el
+            // slug, no el ID — ver App\Models\Concerns\HasTranslatableSlug).
+            // Sin esto, el botón enlaza a /admin/servicios/{slug}/edit pero el
+            // panel resuelve el registro por ID (ver $recordRouteKeyName más
+            // arriba) y el clic siempre da 404.
+            'edit' => Pages\EditService::route('/{record:id}/edit'),
         ];
     }
 }

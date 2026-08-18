@@ -27,11 +27,11 @@ class PostResource extends Resource
 
     protected static ?string $navigationGroup = 'Contenido del sitio';
 
-    protected static ?string $navigationLabel = 'Blog y noticias';
+    protected static ?string $navigationLabel = 'Recursos';
 
-    protected static ?string $modelLabel = 'entrada';
+    protected static ?string $modelLabel = 'recurso';
 
-    protected static ?string $pluralModelLabel = 'entradas';
+    protected static ?string $pluralModelLabel = 'recursos';
 
     protected static ?int $navigationSort = 4;
 
@@ -115,7 +115,9 @@ class PostResource extends Resource
         return [
             'index' => Pages\ListPosts::route('/'),
             'create' => Pages\CreatePost::route('/create'),
-            'edit' => Pages\EditPost::route('/{record}/edit'),
+            // Ver la nota equivalente en ServiceResource::getPages(): ":id"
+            // evita el 404 al hacer clic en "Editar" desde la tabla.
+            'edit' => Pages\EditPost::route('/{record:id}/edit'),
         ];
     }
 }

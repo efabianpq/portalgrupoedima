@@ -1,0 +1,921 @@
+{
+    "extraction": {
+        "source_site": "https://grupoedima.com/",
+        "extracted_at": "2026-08-16",
+        "platform": "WordPress 6.9.6",
+        "theme": "local-business-wordpress-theme (VW Themes)",
+        "method": "HTML renderizado como fuente de verdad (el contenido vive en opciones del Customizer del tema, no en posts/páginas). /wp-json/ usado sólo como fuente complementaria.",
+        "primary_locale": "en",
+        "notes": "El sitio es one-page: todo el contenido real está en la home. Las páginas /blog/, /page/ y /contact/ son stubs vacíos."
+    },
+    "urls_visited": [
+        {
+            "url": "https://grupoedima.com/",
+            "status": 200,
+            "role": "home (one-page, contenido real)"
+        },
+        {
+            "url": "https://grupoedima.com/blog/",
+            "status": 200,
+            "role": "stub vacío (sólo <h1>Blog)"
+        },
+        {
+            "url": "https://grupoedima.com/page/",
+            "status": 200,
+            "role": "stub vacío (sólo <h1>Page)"
+        },
+        {
+            "url": "https://grupoedima.com/contact/",
+            "status": 200,
+            "role": "stub vacío (sólo <h1>Contact)"
+        },
+        {
+            "url": "https://grupoedima.com/es/home-espanol/",
+            "status": 404,
+            "role": "ROTA: existe en WP (page id 96, publish) pero devuelve 404"
+        },
+        {
+            "url": "https://grupoedima.com/wp-json/wp/v2/pages",
+            "status": 200,
+            "role": "complementaria"
+        },
+        {
+            "url": "https://grupoedima.com/wp-json/wp/v2/posts",
+            "status": 200,
+            "role": "complementaria"
+        },
+        {
+            "url": "https://grupoedima.com/wp-json/wp/v2/media",
+            "status": 200,
+            "role": "complementaria"
+        },
+        {
+            "url": "https://grupoedima.com/wp-json/wp/v2/testimonials",
+            "status": 404,
+            "role": "CPT no expuesto en REST"
+        },
+        {
+            "url": "https://grupoedima.com/wp-json/wp/v2/team",
+            "status": 404,
+            "role": "CPT no expuesto en REST"
+        },
+        {
+            "url": "https://grupoedima.com/wp-sitemap.xml",
+            "status": 200,
+            "role": "descubrimiento de URLs"
+        }
+    ],
+    "source_inventory": {
+        "wp_pages": [
+            {
+                "id": 96,
+                "slug": "home-espanol",
+                "title": "Home – Español",
+                "link": "https://grupoedima.com/es/home-espanol/"
+            },
+            {
+                "id": 12,
+                "slug": "contact",
+                "title": "Contact",
+                "link": "https://grupoedima.com/contact/"
+            },
+            {
+                "id": 11,
+                "slug": "page",
+                "title": "Page",
+                "link": "https://grupoedima.com/page/"
+            },
+            {
+                "id": 10,
+                "slug": "blog",
+                "title": "Blog",
+                "link": "https://grupoedima.com/blog/"
+            },
+            {
+                "id": 9,
+                "slug": "home",
+                "title": "Home",
+                "link": "https://grupoedima.com/"
+            }
+        ],
+        "wp_posts": [
+            {
+                "id": 17,
+                "slug": "praesent-suscipit-m3",
+                "title": "Praesent suscipit m3",
+                "date": "2026-02-27T14:51:23",
+                "is_demo_content": true
+            },
+            {
+                "id": 15,
+                "slug": "praesent-suscipit-m2",
+                "title": "Praesent suscipit m2",
+                "date": "2026-02-27T14:51:22",
+                "is_demo_content": true
+            },
+            {
+                "id": 13,
+                "slug": "praesent-suscipit-m1",
+                "title": "Praesent suscipit m1",
+                "date": "2026-02-27T14:51:22",
+                "is_demo_content": true
+            },
+            {
+                "id": 1,
+                "slug": "hello-world",
+                "title": "Hello world!",
+                "date": "2026-02-27T14:41:46",
+                "is_demo_content": true
+            }
+        ],
+        "wp_custom_post_types": {
+            "testimonials": {
+                "urls": [
+                    "testimonial1",
+                    "testimonial2",
+                    "testimonial3",
+                    "testimonial4"
+                ],
+                "rest_exposed": false,
+                "rendered_on_home": false,
+                "assumed_demo_content": true
+            },
+            "team": {
+                "urls": [
+                    "team1",
+                    "team2",
+                    "team3",
+                    "team4"
+                ],
+                "rest_exposed": false,
+                "rendered_on_home": false,
+                "assumed_demo_content": true
+            }
+        }
+    },
+    "seo": {
+        "home": {
+            "url": "https://grupoedima.com/",
+            "title": null,
+            "title_is_empty": true,
+            "meta_description": null,
+            "canonical": "https://grupoedima.com/",
+            "robots": "max-image-preview:large",
+            "og": null,
+            "twitter": null,
+            "generator": "WordPress 6.9.6",
+            "html_lang": "en-US"
+        },
+        "blog": {
+            "url": "https://grupoedima.com/blog/",
+            "title": "Blog",
+            "title_is_empty": false,
+            "meta_description": null,
+            "canonical": "https://grupoedima.com/blog/",
+            "robots": "max-image-preview:large",
+            "og": null,
+            "twitter": null,
+            "generator": "WordPress 6.9.6",
+            "html_lang": "en-US"
+        },
+        "page": {
+            "url": "https://grupoedima.com/page/",
+            "title": "Page",
+            "title_is_empty": false,
+            "meta_description": null,
+            "canonical": "https://grupoedima.com/page/",
+            "robots": "max-image-preview:large",
+            "og": null,
+            "twitter": null,
+            "generator": "WordPress 6.9.6",
+            "html_lang": "en-US"
+        },
+        "contact": {
+            "url": "https://grupoedima.com/contact/",
+            "title": "Contact",
+            "title_is_empty": false,
+            "meta_description": null,
+            "canonical": "https://grupoedima.com/contact/",
+            "robots": "max-image-preview:large",
+            "og": null,
+            "twitter": null,
+            "generator": "WordPress 6.9.6",
+            "html_lang": "en-US"
+        }
+    },
+    "top_bar": {
+        "locale": "en",
+        "country": "Colombia",
+        "phone": "+573013966515",
+        "email": "fabian.pachon@grupoedima.com",
+        "email_note": "En el HTML el correo está ofuscado por Cloudflare (data-cfemail); aquí va decodificado.",
+        "raw_left_items": [
+            "Colombia",
+            "+573013966515",
+            "[email protected]"
+        ],
+        "social_links": [
+            {
+                "platform_class": "twitter",
+                "url": "https://twitter.com/",
+                "is_placeholder": true
+            },
+            {
+                "platform_class": "facebook",
+                "url": "https://www.facebook.com/",
+                "is_placeholder": true
+            },
+            {
+                "platform_class": "linkedin",
+                "url": "https://www.linkedin.com",
+                "is_placeholder": true
+            },
+            {
+                "platform_class": "gplus",
+                "url": "https://www.pinterest.com/",
+                "is_placeholder": true
+            }
+        ]
+    },
+    "branding": {
+        "logo_url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-1.png",
+        "logo_width": "240",
+        "logo_height": "60",
+        "logo_alt": null,
+        "site_title_text": null,
+        "favicons": [
+            {
+                "rel": "shortcut icon",
+                "sizes": null,
+                "url": "#"
+            },
+            {
+                "rel": "icon",
+                "sizes": "32x32",
+                "url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-32x32.png"
+            },
+            {
+                "rel": "icon",
+                "sizes": "192x192",
+                "url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-192x192.png"
+            },
+            {
+                "rel": "apple-touch-icon",
+                "sizes": null,
+                "url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-180x180.png"
+            }
+        ]
+    },
+    "navigation": {
+        "items": [
+            {
+                "label": "Home",
+                "url": "https://grupoedima.com/",
+                "raw_href": "https://grupoedima.com/"
+            }
+        ],
+        "header_cta": {
+            "label": "CONTACT US",
+            "url": null,
+            "raw_href": null
+        }
+    },
+    "hero_slides": [
+        {
+            "id": "slide_1",
+            "locale": "en",
+            "eyebrow": "GRUPO EDIMA – OFFICIAL BIZZDESIGN HOPEX PARTNER",
+            "title": "ENTERPRISE ARCHITECTURE",
+            "subtitle": "Empowering organizations to align strategy, technology, and business capabilities through HOPEX.",
+            "paragraph": "We enable enterprises across Latin America to design, govern, and evolve their architecture ecosystems with clarity, structure, and measurable business value. From IT portfolio optimization to risk governance and capability-driven transformation, we help leaders make informed decisions with confidence.",
+            "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide1.png",
+            "buttons": [
+                {
+                    "label": "Get Started",
+                    "url": null,
+                    "raw_href": null
+                },
+                {
+                    "label": "Contact Us",
+                    "url": null,
+                    "raw_href": null
+                }
+            ]
+        },
+        {
+            "id": "slide_2",
+            "locale": "en",
+            "eyebrow": "GRUPO EDIMA – HOPEX IT PORTFOLIO EXPERTS",
+            "title": "STRATEGIC IT PORTFOLIO OPTIMIZATION & GOVERNANCE",
+            "subtitle": "Aligning IT investments with business strategy and measurable value.",
+            "paragraph": "We help organizations gain full visibility over their application, project, and technology portfolios through structured governance frameworks powered by HOPEX. From rationalization initiatives to investment prioritization, we enable data-driven decision-making that maximizes ROI and reduces operational risk.",
+            "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide2.png",
+            "buttons": [
+                {
+                    "label": "Get Started",
+                    "url": null,
+                    "raw_href": null
+                },
+                {
+                    "label": "Contact Us",
+                    "url": null,
+                    "raw_href": null
+                }
+            ]
+        },
+        {
+            "id": "slide_3",
+            "locale": "en",
+            "eyebrow": "GRUPO EDIMA – BUSINESS CAPABILITY ARCHITECTURE",
+            "title": "BUSINESS CAPABILITIES & DIGITAL TRANSFORMATION",
+            "subtitle": "Designing capability-driven organizations ready for sustainable growth.",
+            "paragraph": "We structure and map business capabilities to connect strategy, operations, and technology, creating a clear transformation roadmap supported by HOPEX. Our approach enables leaders to prioritize initiatives, improve agility, and drive enterprise-wide transformation with clarity and governance.",
+            "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide3.png",
+            "buttons": [
+                {
+                    "label": "Get Started",
+                    "url": null,
+                    "raw_href": null
+                },
+                {
+                    "label": "Contact Us",
+                    "url": null,
+                    "raw_href": null
+                }
+            ]
+        }
+    ],
+    "about": {
+        "locale": "en",
+        "heading": "About Us",
+        "subheading": "Grupo Edima is a Colombian consulting firm specialized in the implementation, customization, and adoption of the HOPEX platform by Bizzdesign.",
+        "paragraphs": [
+            "Our Mission: To deliver comprehensive solutions based on the HOPEX by Bizzdesign platform, enabling organizations to optimize their Enterprise Architecture, IT Governance, Risk Management, and Digital Transformation initiatives."
+        ],
+        "bullets": [
+            "Enterprise Architecture",
+            "IT Governance",
+            "Risk Management",
+            "Digital Transformation"
+        ],
+        "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/aboutimg.png",
+        "cta": {
+            "label": "READ MORE",
+            "url": null,
+            "raw_href": null
+        }
+    },
+    "services": {
+        "heading": "Our Services",
+        "background_image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/servicesbg.png",
+        "tabs": [
+            {
+                "target": "services_area1",
+                "name": "IMPLEMENTATION",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon1.png"
+            },
+            {
+                "target": "services_area2",
+                "name": "TRAINING",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon2.png"
+            },
+            {
+                "target": "services_area3",
+                "name": "CUSTOM DEVELOPMENT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon3.png"
+            },
+            {
+                "target": "services_area4",
+                "name": "SUPPORT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon4.png"
+            },
+            {
+                "target": "services_area5",
+                "name": "MIGRATION",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon5.png"
+            },
+            {
+                "target": "services_area6",
+                "name": "ACCOMPANIMENT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon6.png"
+            }
+        ],
+        "items": [
+            {
+                "id": "service_1",
+                "locale": "en",
+                "name": "IMPLEMENTATION",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon1.png",
+                "description": "We implement the BizzDesign HOPEX platform following industry best practices, ensuring alignment with your enterprise architecture framework, governance model, and strategic objectives. Our approach guarantees a structured, secure, and value-driven deployment tailored to your organization’s needs.",
+                "call_to_action": "Start your HOPEX journey with a structured and risk-free implementation. Let our experts design and deploy the right architecture foundation for your organization.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            },
+            {
+                "id": "service_2",
+                "locale": "en",
+                "name": "TRAINING",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon2.png",
+                "description": "We deliver specialized training programs designed for architects, governance leaders, and technical teams, enabling effective adoption and long-term value realization from the HOPEX platform.",
+                "call_to_action": "Empower your teams with the expertise they need to drive transformation. Schedule a tailored HOPEX training session today.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            },
+            {
+                "id": "service_3",
+                "locale": "en",
+                "name": "CUSTOM DEVELOPMENT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon3.png",
+                "description": "We develop tailored configurations, integrations, and extensions within the HOPEX ecosystem to meet your specific business and regulatory requirements. Our solutions are scalable, future-ready, and aligned with your digital transformation roadmap.",
+                "call_to_action": "Unlock the full potential of HOPEX with solutions designed specifically for your organization. Let’s build what your strategy demands.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            },
+            {
+                "id": "service_4",
+                "locale": "en",
+                "name": "SUPPORT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon4.png",
+                "description": "Our specialized HOPEX support services ensure platform stability, performance optimization, and continuous improvement. We provide timely issue resolution and proactive guidance to maintain operational excellence.",
+                "call_to_action": "Ensure business continuity with reliable expert support. Partner with us to keep your HOPEX environment operating at peak performance.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            },
+            {
+                "id": "service_5",
+                "locale": "en",
+                "name": "MIGRATION",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon5.png",
+                "description": "We manage the migration of legacy architecture repositories, data models, and governance structures into HOPEX with accuracy and control. Our methodology minimizes operational disruption while safeguarding business-critical information.",
+                "call_to_action": "Modernize your architecture environment without compromising data integrity. Speak with our team to plan a seamless migration strategy.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            },
+            {
+                "id": "service_6",
+                "locale": "en",
+                "name": "ACCOMPANIMENT",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon6.png",
+                "description": "We provide strategic advisory services to guide organizations through Enterprise Architecture maturity, IT Governance optimization, and Digital Transformation initiatives supported by HOPEX.",
+                "call_to_action": "Accelerate your transformation journey with expert guidance at every stage. Let’s define the next step for your organization.",
+                "read_more": {
+                    "label": "Read More",
+                    "url": null,
+                    "raw_href": null
+                }
+            }
+        ]
+    },
+    "why_choose_us": {
+        "heading": "WHY CHOOSE US",
+        "items": [
+            {
+                "id": "choose_1",
+                "locale": "en",
+                "title": "Proven Implementation Methodology",
+                "description": "We apply a structured and proven framework for HOPEX implementation, ensuring alignment with your Enterprise Architecture strategy, governance model, and business objectives. Our phased approach minimizes risk and accelerates time-to-value.",
+                "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose1.png"
+            },
+            {
+                "id": "choose_2",
+                "locale": "en",
+                "title": "Long-Term Strategic Partnership",
+                "description": "We focus on delivering measurable business value — not just technology deployment. Every initiative is designed to optimize processes, strengthen governance, manage risk, and align IT with corporate strategy.",
+                "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose2.png"
+            },
+            {
+                "id": "choose_3",
+                "locale": "en",
+                "title": "Business-Driven Approach",
+                "description": "We build lasting partnerships through continuous advisory, knowledge transfer, and expert support. Our goal is to empower your teams and ensure sustainable evolution of your HOPEX environment.",
+                "image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose3.png"
+            }
+        ]
+    },
+    "expertise": {
+        "heading": "we are expert in",
+        "background_image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/weareexpertbg.png",
+        "paragraphs": [
+            "At Grupo Edima, our expertise combines deep technical mastery of the HOPEX platform with strategic Enterprise Architecture advisory capabilities. We specialize in the installation, customization, migration, and optimization of HOPEX environments, ensuring that the platform is fully aligned with each organization’s governance model and transformation objectives.Our experience spans Business Capability modeling and strategy alignment, IT Portfolio Management, Risk and Compliance (GRC) frameworks, and Business Process design and automation. We support organizations from capability definition and value stream structuring to application rationalization, risk governance, and process optimization initiatives. By integrating technical excellence with architectural vision, we enable enterprises to transform HOPEX into a strategic decision-support platform—connecting business strategy, technology investments, governance controls, and operational execution within a unified and structured ecosystem."
+        ],
+        "skills": [
+            {
+                "id": "skill_1",
+                "locale": "en",
+                "label": "Business Capabilities & Strategy Alignment",
+                "percent": 100,
+                "percent_label": "100%"
+            },
+            {
+                "id": "skill_2",
+                "locale": "en",
+                "label": "IT Portfolio Management & Governance",
+                "percent": 100,
+                "percent_label": "100%"
+            },
+            {
+                "id": "skill_3",
+                "locale": "en",
+                "label": "Risk, Compliance & GRC Integration",
+                "percent": 100,
+                "percent_label": "100%"
+            },
+            {
+                "id": "skill_4",
+                "locale": "en",
+                "label": "Business Process Architecture & Automation",
+                "percent": 100,
+                "percent_label": "100%"
+            }
+        ]
+    },
+    "facts": {
+        "heading": "Some Facts About us",
+        "items": [
+            {
+                "id": "fact_1",
+                "locale": "en",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter1.png",
+                "icon_class": null,
+                "value": "99%",
+                "label": "Horas de soporte",
+                "raw": "99% Horas de soporte"
+            },
+            {
+                "id": "fact_2",
+                "locale": "en",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter2.png",
+                "icon_class": null,
+                "value": "19%",
+                "label": "Clientes",
+                "raw": "19% Clientes"
+            },
+            {
+                "id": "fact_3",
+                "locale": "en",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter3.png",
+                "icon_class": null,
+                "value": "59%",
+                "label": "Proyectos",
+                "raw": "59% Proyectos"
+            },
+            {
+                "id": "fact_4",
+                "locale": "en",
+                "icon_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter4.png",
+                "icon_class": null,
+                "value": "99%",
+                "label": "Horas de capacitación",
+                "raw": "99% Horas de capacitación"
+            }
+        ]
+    },
+    "clients": {
+        "heading": "Our Clients",
+        "items": [
+            {
+                "id": "client_1",
+                "inferred_name": "Pronaca",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_pronaca-1.png"
+            },
+            {
+                "id": "client_2",
+                "inferred_name": "Colanta",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_colanta-1.png"
+            },
+            {
+                "id": "client_3",
+                "inferred_name": "Bizzdesign",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_bizzdesign.png"
+            },
+            {
+                "id": "client_4",
+                "inferred_name": "Solunion",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_solunion.png"
+            },
+            {
+                "id": "client_5",
+                "inferred_name": "Sura",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_sura-1.png"
+            },
+            {
+                "id": "client_6",
+                "inferred_name": "Celec",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_celec.png"
+            },
+            {
+                "id": "client_7",
+                "inferred_name": "Evolve",
+                "name_source": "filename",
+                "alt_attribute": "Image",
+                "logo_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_evolve.png"
+            }
+        ]
+    },
+    "footer": {
+        "locale": "en",
+        "copyright": "© 2026 Grupo Edima. Enterprise Architecture & Digital Transformation Experts.",
+        "theme_credit": "Design & Developed by VW Themes",
+        "theme_credit_note": "Crédito del tema VW Themes: NO migrar.",
+        "background_image_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/footerbg.png",
+        "widget_columns": [
+            null,
+            null,
+            null,
+            null
+        ],
+        "widget_columns_empty": true,
+        "legal_text": null
+    },
+    "secondary_pages": {
+        "blog": {
+            "url": "https://grupoedima.com/blog/",
+            "heading": "Blog",
+            "body": null,
+            "is_empty_stub": true
+        },
+        "page": {
+            "url": "https://grupoedima.com/page/",
+            "heading": "Page",
+            "body": null,
+            "is_empty_stub": true
+        },
+        "contact": {
+            "url": "https://grupoedima.com/contact/",
+            "heading": "Contact",
+            "body": null,
+            "is_empty_stub": true
+        }
+    },
+    "assets": [
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-32x32.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/02/cropped-Logo-32x32.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-192x192.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/02/cropped-Logo-192x192.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-180x180.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/02/cropped-Logo-180x180.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/02/cropped-Logo-1.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/02/cropped-Logo-1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide1.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide2.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide2.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide3.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/slides/slide3.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/aboutimg.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/aboutimg.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon1.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon2.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon2.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon3.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon3.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon4.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon4.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon5.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon5.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon6.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/serviceicon6.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/servicesbg.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/services-tab/servicesbg.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose1.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose2.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose2.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose3.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/why-choose-us/whychoose3.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/weareexpertbg.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/weareexpertbg.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter1.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/counter1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter2.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/counter2.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter3.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/counter3.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/counter4.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/counter4.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_pronaca-1.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_pronaca-1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_colanta-1.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_colanta-1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_bizzdesign.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_bizzdesign.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_solunion.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_solunion.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_sura-1.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_sura-1.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_celec.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_celec.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/uploads/2026/03/Logo_evolve.png",
+            "local_path": "storage/migration/assets/wp-content/uploads/2026/03/Logo_evolve.png"
+        },
+        {
+            "original_url": "https://grupoedima.com/wp-content/themes/local-business-wordpress-theme/assets/images/footerbg.png",
+            "local_path": "storage/migration/assets/wp-content/themes/local-business-wordpress-theme/assets/images/footerbg.png"
+        }
+    ],
+    "inconsistencies": {
+        "language_mixing": [
+            {
+                "section": "facts",
+                "locale": "es",
+                "detail": "Toda la sección \"Some Facts About us\" tiene el encabezado en inglés pero las 4 etiquetas de los contadores en español.",
+                "items": [
+                    {
+                        "value": "99%",
+                        "label": "Horas de soporte",
+                        "locale": "es"
+                    },
+                    {
+                        "value": "19%",
+                        "label": "Clientes",
+                        "locale": "es"
+                    },
+                    {
+                        "value": "59%",
+                        "label": "Proyectos",
+                        "locale": "es"
+                    },
+                    {
+                        "value": "99%",
+                        "label": "Horas de capacitación",
+                        "locale": "es"
+                    }
+                ]
+            }
+        ],
+        "seo": [
+            "Todas las páginas tienen <title> VACÍO (<title></title>).",
+            "Ninguna página tiene meta description.",
+            "No hay etiquetas Open Graph ni Twitter Card en ninguna página.",
+            "No hay meta robots."
+        ],
+        "empty_links": {
+            "count": 14,
+            "detail": "Todos los CTA del sitio tienen href=\"\" (sin destino). Registrados como null.",
+            "items": [
+                "hero.slide_1 → \"Get Started\"",
+                "hero.slide_1 → \"Contact Us\"",
+                "hero.slide_2 → \"Get Started\"",
+                "hero.slide_2 → \"Contact Us\"",
+                "hero.slide_3 → \"Get Started\"",
+                "hero.slide_3 → \"Contact Us\"",
+                "about.cta → \"READ MORE\"",
+                "services.service_1 (IMPLEMENTATION) → \"Read More\"",
+                "services.service_2 (TRAINING) → \"Read More\"",
+                "services.service_3 (CUSTOM DEVELOPMENT) → \"Read More\"",
+                "services.service_4 (SUPPORT) → \"Read More\"",
+                "services.service_5 (MIGRATION) → \"Read More\"",
+                "services.service_6 (ACCOMPANIMENT) → \"Read More\"",
+                "navigation.header_cta → \"CONTACT US\""
+            ]
+        },
+        "placeholder_social_links": {
+            "detail": "Los 4 enlaces sociales apuntan a las URLs por defecto del tema, no a perfiles reales de Grupo Edima.",
+            "items": [
+                {
+                    "platform_class": "twitter",
+                    "url": "https://twitter.com/",
+                    "is_placeholder": true
+                },
+                {
+                    "platform_class": "facebook",
+                    "url": "https://www.facebook.com/",
+                    "is_placeholder": true
+                },
+                {
+                    "platform_class": "linkedin",
+                    "url": "https://www.linkedin.com",
+                    "is_placeholder": true
+                },
+                {
+                    "platform_class": "gplus",
+                    "url": "https://www.pinterest.com/",
+                    "is_placeholder": true
+                }
+            ]
+        },
+        "broken_urls": [
+            {
+                "url": "https://grupoedima.com/es/home-espanol/",
+                "status": 404,
+                "detail": "La página en español existe en WordPress (id 96, estado publish) pero su URL devuelve 404. NO se pudo extraer contenido en español."
+            }
+        ],
+        "demo_content_not_migratable": [
+            "Las 4 entradas del blog son contenido de demostración del tema (\"Hello world!\", \"Praesent suscipit m1/m2/m3\" — texto lorem ipsum).",
+            "Los CPT team1-4 y testimonial1-4 existen en el sitemap pero no se renderizan en la home ni están expuestos en REST; se asumen demo del tema.",
+            "Las páginas /blog/, /page/ y /contact/ no tienen contenido propio (sólo el <h1>)."
+        ],
+        "navigation": [
+            "El menú principal tiene UN SOLO elemento (\"Home\"). No hay navegación real que migrar."
+        ],
+        "footer": [
+            "Las 4 columnas de widgets del pie están vacías.",
+            "El pie incluye el crédito del tema \"Design & Developed by VW Themes\" — NO migrar.",
+            "No hay textos legales (privacidad, términos) en ninguna parte del sitio."
+        ],
+        "source_typos_preserved": [
+            {
+                "section": "expertise.paragraphs[0]",
+                "detail": "Falta un espacio entre dos oraciones: \"...transformation objectives.Our experience spans...\". Se transcribe tal cual, sin corregir."
+            }
+        ],
+        "assets": [
+            "Las imágenes de hero, servicios, why-choose-us, contadores y fondos son assets genéricos DEL TEMA (wp-content/themes/...), no material propio de Grupo Edima. Sólo el logo y los 7 logos de clientes están en wp-content/uploads/.",
+            "Los logos de clientes tienen alt genérico (\"Image\"); el nombre se infirió del nombre de archivo.",
+            "Bizzdesign aparece entre los logos de \"clientes\", pero es el fabricante de HOPEX (socio/vendor), no un cliente."
+        ],
+        "duplicated_text": [
+            "Los 3 slides del hero repiten exactamente los mismos textos de botón (\"Get Started\" y \"Contact Us\").",
+            "Los 6 servicios repiten exactamente el mismo texto de botón (\"Read More\").",
+            "El nombre de cada servicio aparece dos veces en el HTML (en la pestaña y en el panel de contenido); se consolidó en un solo registro."
+        ]
+    }
+}

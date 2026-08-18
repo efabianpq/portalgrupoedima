@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2F6F7"/>
+      <stop offset="1" stop-color="#DDEAEE"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+
+  <!-- Libro abierto: formación sobre el propio repositorio -->
+  <g stroke="#046380" stroke-width="4" stroke-linejoin="round" fill="#FFFFFF">
+    <path d="M200 116 C 176 100, 140 100, 120 110 L120 196 C 140 186, 176 186, 200 202 Z"/>
+    <path d="M200 116 C 224 100, 260 100, 280 110 L280 196 C 260 186, 224 186, 200 202 Z"/>
+  </g>
+  <path d="M200 116 L200 202" stroke="#046380" stroke-width="3"/>
+
+  <!-- Habilitación por rol: puntos conectados -->
+  <g fill="#FAA92E">
+    <circle cx="150" cy="140" r="5"/>
+    <circle cx="170" cy="160" r="5"/>
+    <circle cx="230" cy="140" r="5"/>
+    <circle cx="250" cy="160" r="5"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <!-- Marca abstracta de identidad: anillos entrelazados (equipo especializado en una sola plataforma). -->
+  <g fill="none" stroke-width="4">
+    <circle cx="172" cy="150" r="48" stroke="#046380"/>
+    <circle cx="228" cy="150" r="48" stroke="#0A7CB8"/>
+  </g>
+  <circle cx="200" cy="150" r="10" fill="#FAA92E"/>
+</svg>

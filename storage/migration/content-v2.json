@@ -1,0 +1,1014 @@
+{
+  "meta": {
+    "version": 2,
+    "created_at": "2026-08-16",
+    "based_on": "storage/migration/content.json",
+    "strategy": "storage/migration/CONTENT-STRATEGY.md",
+    "primary_locale": "es",
+    "origen_values": ["conservado", "reescrito", "nuevo"],
+    "naming_note": "Se usa 'HOPEX' sin atribución de fabricante hasta confirmar la nomenclatura oficial del acuerdo de partner.",
+    "pending_marker": "[PENDIENTE: …] marca un dato verificable que no se pudo confirmar. Nunca se inventó un dato."
+  },
+
+  "value_proposition": {
+    "origen": "nuevo",
+    "approved": "C + refuerzo A",
+    "es": "Consultora colombiana especializada en HOPEX. Implementamos, migramos y damos soporte a la plataforma en español para organizaciones de Colombia y Ecuador, y acompañamos su adopción hasta que los equipos de arquitectura, gobierno y riesgo la usan en sus decisiones.",
+    "en": "A Colombian consultancy specialized in HOPEX. We implement, migrate and support the platform in Spanish for organizations in Colombia and Ecuador, and we stay involved until architecture, governance and risk teams actually use it in their decisions."
+  },
+
+  "site_settings": {
+    "origen": "reescrito",
+    "company_name": "Grupo Edima",
+    "email": { "value": "fabian.pachon@grupoedima.com", "origen": "conservado" },
+    "phone": { "value": "+573013966515", "origen": "conservado" },
+    "address": {
+      "origen": "reescrito",
+      "es": "Colombia · Ecuador",
+      "en": "Colombia · Ecuador"
+    },
+    "social_links": {
+      "origen": "reescrito",
+      "value": [],
+      "note": "Los del sitio anterior eran los valores por defecto del tema. [PENDIENTE: URLs reales de LinkedIn y demás perfiles]"
+    },
+    "footer_text": {
+      "origen": "reescrito",
+      "es": "Consultora especializada en HOPEX para organizaciones de Colombia y Ecuador.",
+      "en": "A consultancy specialized in HOPEX for organizations in Colombia and Ecuador."
+    },
+    "meta_title": {
+      "es": "Grupo Edima · Consultoría HOPEX",
+      "en": "Grupo Edima · HOPEX Consulting"
+    },
+    "meta_description": {
+      "es": "Consultora colombiana especializada en HOPEX: implementación, migración, personalización, soporte y formación en español para Colombia y Ecuador.",
+      "en": "Colombian consultancy specialized in HOPEX: implementation, migration, customization, support and training in Spanish for Colombia and Ecuador."
+    }
+  },
+
+  "pages": {
+
+    "home": {
+      "origen": "reescrito",
+      "url": { "es": "/es", "en": "/en" },
+      "seo": {
+        "title": {
+          "es": "HOPEX en Colombia y Ecuador · Grupo Edima",
+          "en": "HOPEX in Colombia and Ecuador · Grupo Edima"
+        },
+        "meta_description": {
+          "es": "Implementamos, migramos y soportamos HOPEX en español para organizaciones de Colombia y Ecuador, y acompañamos su adopción hasta que los equipos la usan.",
+          "en": "We implement, migrate and support HOPEX in Spanish for organizations in Colombia and Ecuador, and stay involved until teams actually use it."
+        }
+      },
+      "h1": {
+        "es": "Especialistas en HOPEX para organizaciones de Colombia y Ecuador",
+        "en": "HOPEX specialists for organizations in Colombia and Ecuador"
+      },
+      "blocks": [
+        {
+          "id": "hero",
+          "origen": "reescrito",
+          "note": "Reemplaza el carrusel de 3 slides del sitio anterior por un único mensaje.",
+          "eyebrow": {
+            "es": "Consultoría en arquitectura empresarial",
+            "en": "Enterprise architecture consulting"
+          },
+          "subtitle": {
+            "es": "Implementamos, migramos y damos soporte a HOPEX en español, y acompañamos su adopción hasta que los equipos de arquitectura, gobierno y riesgo la usan en sus decisiones.",
+            "en": "We implement, migrate and support HOPEX in Spanish, and we stay involved until architecture, governance and risk teams use it in their decisions."
+          },
+          "cta_primary": {
+            "es": "Conversemos sobre tu arquitectura",
+            "en": "Let's talk about your architecture",
+            "route": "contact"
+          },
+          "cta_secondary": {
+            "es": "Ver servicios",
+            "en": "View services",
+            "route": "services"
+          }
+        },
+        {
+          "id": "intro",
+          "origen": "reescrito",
+          "note": "Recupera la sustancia del párrafo 'We are expert in' del sitio anterior, reestructurada.",
+          "heading": {
+            "es": "Del repositorio a la decisión",
+            "en": "From repository to decision"
+          },
+          "body": {
+            "es": "Una herramienta de arquitectura empresarial sólo genera valor cuando alguien decide con ella. Nuestro trabajo es cerrar esa distancia: configuramos HOPEX de acuerdo con tu marco de arquitectura y tu modelo de gobierno, cargamos y validamos la información, y habilitamos a los equipos para que el repositorio sostenga decisiones reales sobre portafolio, riesgo e inversión tecnológica.",
+            "en": "An enterprise architecture platform only creates value when someone makes decisions with it. Our work is to close that gap: we configure HOPEX around your architecture framework and governance model, load and validate the information, and enable your teams so the repository supports real decisions on portfolio, risk and technology investment."
+          }
+        },
+        {
+          "id": "services_summary",
+          "origen": "reescrito",
+          "heading": {
+            "es": "Servicios",
+            "en": "Services"
+          },
+          "subheading": {
+            "es": "Cubrimos el ciclo completo de la plataforma, desde la puesta en operación hasta la asesoría continua.",
+            "en": "We cover the full platform lifecycle, from initial rollout to ongoing advisory."
+          },
+          "source": "services[]",
+          "cta": { "es": "Ver todos los servicios", "en": "View all services", "route": "services" }
+        },
+        {
+          "id": "hopex_teaser",
+          "origen": "nuevo",
+          "heading": {
+            "es": "¿Estás evaluando HOPEX?",
+            "en": "Evaluating HOPEX?"
+          },
+          "body": {
+            "es": "Si todavía estás decidiendo si la plataforma encaja en tu organización, explicamos para qué sirve, qué problemas resuelve y qué hace falta para operarla.",
+            "en": "If you are still deciding whether the platform fits your organization, we explain what it is for, which problems it solves and what it takes to run it."
+          },
+          "cta": { "es": "Conocer la plataforma", "en": "About the platform", "route": "hopex" }
+        },
+        {
+          "id": "approach",
+          "origen": "reescrito",
+          "note": "Reemplaza 'Why Choose Us'. En el sitio anterior los títulos 2 y 3 estaban cruzados respecto a sus textos; aquí cada título corresponde a su contenido y se eliminaron los adjetivos sin evidencia.",
+          "heading": {
+            "es": "Cómo trabajamos",
+            "en": "How we work"
+          },
+          "items": [
+            {
+              "id": "approach_1",
+              "title": { "es": "Implementación por fases", "en": "Phased implementation" },
+              "description": {
+                "es": "Trabajamos por fases con alcance y entregables definidos en cada una: diseño del modelo, configuración, carga y validación, habilitación y puesta en operación. Cada fase cierra con algo verificable, de modo que la organización puede detener, ajustar o continuar con información en la mano.",
+                "en": "We work in phases with a defined scope and deliverables for each one: model design, configuration, data load and validation, enablement and go-live. Every phase closes with something verifiable, so the organization can stop, adjust or continue based on evidence."
+              }
+            },
+            {
+              "id": "approach_2",
+              "title": { "es": "Enfoque orientado al negocio", "en": "Business-driven approach" },
+              "description": {
+                "es": "El objetivo no es tener un repositorio completo, sino uno que se use. Diseñamos el modelo a partir de las decisiones que la organización necesita tomar —qué aplicaciones racionalizar, qué riesgos priorizar, dónde invertir— y descartamos el detalle que nadie va a mantener.",
+                "en": "The goal is not a complete repository, but one that gets used. We design the model around the decisions the organization actually needs to make — which applications to rationalize, which risks to prioritize, where to invest — and leave out detail nobody will maintain."
+              }
+            },
+            {
+              "id": "approach_3",
+              "title": { "es": "Acompañamiento a largo plazo", "en": "Long-term partnership" },
+              "description": {
+                "es": "La adopción no termina con la puesta en operación. Continuamos con soporte, transferencia de conocimiento y asesoría recurrente, para que el equipo interno pueda sostener y hacer evolucionar el entorno sin dependencia permanente de un tercero.",
+                "en": "Adoption does not end at go-live. We continue with support, knowledge transfer and ongoing advisory, so the internal team can maintain and evolve the environment without permanent dependence on a third party."
+              }
+            }
+          ]
+        },
+        {
+          "id": "capabilities",
+          "origen": "reescrito",
+          "note": "Sustituye las 4 barras de habilidad al 100 %, eliminadas por no aportar información. Cada tarjeta enlaza ahora a su página de Solución (ver storage/migration/ANALISIS-REFERENCIA.md A5); alcance conservador de 4 disciplinas.",
+          "heading": { "es": "Soluciones", "en": "Solutions" },
+          "subheading": {
+            "es": "Cuatro disciplinas de HOPEX en las que tenemos práctica, cada una resolviendo un problema de negocio distinto.",
+            "en": "Four HOPEX disciplines where we have hands-on practice, each solving a different business problem."
+          },
+          "items": [
+            {
+              "id": "capability_1",
+              "title": { "es": "Arquitectura empresarial", "en": "Enterprise architecture" },
+              "description": {
+                "es": "Mapas de capacidades, cadenas de valor y alineación entre la estrategia y la arquitectura objetivo.",
+                "en": "Capability maps, value streams and alignment between strategy and target architecture."
+              },
+              "route": "solutions.show",
+              "slug": { "es": "arquitectura-empresarial", "en": "enterprise-architecture" }
+            },
+            {
+              "id": "capability_2",
+              "title": { "es": "Portafolio de aplicaciones", "en": "Application portfolio" },
+              "description": {
+                "es": "Inventario de aplicaciones, racionalización y gobierno de la inversión tecnológica.",
+                "en": "Application inventory, rationalization and technology investment governance."
+              },
+              "route": "solutions.show",
+              "slug": { "es": "portafolio-de-aplicaciones", "en": "application-portfolio" }
+            },
+            {
+              "id": "capability_3",
+              "title": { "es": "Gobierno, riesgo y cumplimiento", "en": "Governance, risk and compliance" },
+              "description": {
+                "es": "Estructuras de riesgo tecnológico y cumplimiento sobre ISO 31000 y COBIT, integradas al repositorio de arquitectura.",
+                "en": "Technology risk and compliance structures based on ISO 31000 and COBIT, integrated into the architecture repository."
+              },
+              "route": "solutions.show",
+              "slug": { "es": "gobierno-riesgo-y-cumplimiento", "en": "governance-risk-and-compliance" }
+            },
+            {
+              "id": "capability_4",
+              "title": { "es": "Procesos de negocio", "en": "Business processes" },
+              "description": {
+                "es": "Modelado, documentación y optimización de procesos conectados con las capacidades y los sistemas que los soportan.",
+                "en": "Modeling, documentation and optimization of processes connected to the capabilities and systems that support them."
+              },
+              "route": "solutions.show",
+              "slug": { "es": "procesos-de-negocio", "en": "business-processes" }
+            }
+          ],
+          "cta": { "es": "Ver todas las soluciones", "en": "View all solutions", "route": "solutions" }
+        },
+        {
+          "id": "clients",
+          "origen": "conservado",
+          "published": false,
+          "note": "Bloque NO publicado. [PENDIENTE: autorización escrita de uso de marca de cada organización]. Bizzdesign se retiró de esta lista por ser el fabricante, no un cliente.",
+          "heading": { "es": "Organizaciones que confían en nosotros", "en": "Organizations that trust us" },
+          "items": [
+            { "name": "Pronaca", "logo": "images/clientes/Logo_pronaca-1.png", "authorized": null },
+            { "name": "Colanta", "logo": "images/clientes/Logo_colanta-1.png", "authorized": null },
+            { "name": "Solunion", "logo": "images/clientes/Logo_solunion.png", "authorized": null },
+            { "name": "Sura", "logo": "images/clientes/Logo_sura-1.png", "authorized": null },
+            { "name": "Celec", "logo": "images/clientes/Logo_celec.png", "authorized": null },
+            { "name": "Evolve", "logo": "images/clientes/Logo_evolve.png", "authorized": null }
+          ]
+        },
+        {
+          "id": "facts",
+          "origen": "reescrito",
+          "published": false,
+          "note": "Los contadores del sitio anterior (99 %, 19 %, 59 %, 99 %) eran valores de demostración y se eliminaron. Bloque sin publicar hasta tener cifras reales.",
+          "items": [
+            { "label": { "es": "Implementaciones realizadas", "en": "Implementations delivered" }, "value": "[PENDIENTE: número real]" },
+            { "label": { "es": "Organizaciones atendidas", "en": "Organizations served" }, "value": "[PENDIENTE: número real]" },
+            { "label": { "es": "Horas de formación impartidas", "en": "Training hours delivered" }, "value": "[PENDIENTE: número real]" },
+            { "label": { "es": "Años de operación", "en": "Years in operation" }, "value": "[PENDIENTE: año de fundación]" }
+          ]
+        },
+        {
+          "id": "cta_final",
+          "origen": "nuevo",
+          "heading": { "es": "¿Conversamos sobre tu arquitectura?", "en": "Shall we talk about your architecture?" },
+          "body": {
+            "es": "Cuéntanos en qué punto está tu organización: si estás evaluando la plataforma, si ya la tienes y no termina de adoptarse, o si necesitas migrar desde otra herramienta.",
+            "en": "Tell us where your organization stands: whether you are evaluating the platform, already have it but adoption has stalled, or need to migrate from another tool."
+          },
+          "cta": { "es": "Escríbenos", "en": "Get in touch", "route": "contact" }
+        }
+      ]
+    },
+
+    "hopex": {
+      "origen": "nuevo",
+      "url": { "es": "/es/plataforma-hopex", "en": "/en/hopex-platform" },
+      "seo": {
+        "title": {
+          "es": "Qué es HOPEX y para qué sirve · Grupo Edima",
+          "en": "What HOPEX is and what it is for · Grupo Edima"
+        },
+        "meta_description": {
+          "es": "Qué es HOPEX, qué problemas resuelve en arquitectura empresarial, gobierno de TI y riesgo, y qué hace falta para ponerla en operación.",
+          "en": "What HOPEX is, which enterprise architecture, IT governance and risk problems it solves, and what it takes to get it running."
+        }
+      },
+      "h1": { "es": "La plataforma HOPEX", "en": "The HOPEX platform" },
+      "blocks": [
+        {
+          "id": "hopex_intro",
+          "origen": "nuevo",
+          "subtitle": {
+            "es": "Un repositorio único para la arquitectura, el portafolio de TI, el riesgo y los procesos de la organización.",
+            "en": "A single repository for the organization's architecture, IT portfolio, risk and processes."
+          },
+          "body": {
+            "es": "HOPEX es una plataforma de arquitectura empresarial y gobierno. Su función es reunir en un solo repositorio información que normalmente está dispersa —aplicaciones, capacidades de negocio, procesos, riesgos, proyectos y tecnología— y mantener las relaciones entre esos elementos, de modo que se pueda responder con evidencia a preguntas que de otro modo se responden por intuición.",
+            "en": "HOPEX is an enterprise architecture and governance platform. Its purpose is to bring together in a single repository information that is usually scattered — applications, business capabilities, processes, risks, projects and technology — and to maintain the relationships between them, so questions that would otherwise be answered by intuition can be answered with evidence."
+          }
+        },
+        {
+          "id": "hopex_questions",
+          "origen": "nuevo",
+          "heading": { "es": "Preguntas que permite responder", "en": "Questions it helps answer" },
+          "items": [
+            { "es": "Qué aplicaciones sostienen cada capacidad de negocio, y cuáles se solapan.", "en": "Which applications support each business capability, and where they overlap." },
+            { "es": "Qué impacto tiene dar de baja un sistema, y sobre qué procesos.", "en": "What the impact of retiring a system would be, and on which processes." },
+            { "es": "Qué riesgos tecnológicos están asociados a cada proceso crítico.", "en": "Which technology risks are associated with each critical process." },
+            { "es": "Dónde se concentra la inversión de TI y si responde a la estrategia.", "en": "Where IT investment is concentrated and whether it matches the strategy." },
+            { "es": "Qué obsolescencia tecnológica está comprometiendo la operación.", "en": "Which technology obsolescence is putting operations at risk." }
+          ]
+        },
+        {
+          "id": "hopex_modules",
+          "origen": "nuevo",
+          "heading": { "es": "Módulos que implementamos", "en": "Modules we implement" },
+          "body": {
+            "es": "[PENDIENTE: listado de módulos de HOPEX que Grupo Edima implementa y versiones que soporta]",
+            "en": "[PENDIENTE: list of HOPEX modules Grupo Edima implements and supported versions]"
+          }
+        },
+        {
+          "id": "hopex_frameworks",
+          "origen": "nuevo",
+          "heading": { "es": "Marcos con los que trabajamos", "en": "Frameworks we work with" },
+          "body": {
+            "es": "Configuramos la plataforma para que refleje el marco que ya usa la organización, no al revés. Trabajamos con TOGAF para el método de arquitectura, ArchiMate para el modelado, COBIT para el gobierno de TI e ISO 31000 para la gestión de riesgo.",
+            "en": "We configure the platform to reflect the framework the organization already uses, not the other way around. We work with TOGAF for the architecture method, ArchiMate for modeling, COBIT for IT governance and ISO 31000 for risk management."
+          }
+        },
+        {
+          "id": "hopex_cta",
+          "origen": "nuevo",
+          "cta_primary": { "es": "Evaluar HOPEX para tu organización", "en": "Evaluate HOPEX for your organization", "route": "contact" },
+          "cta_secondary": { "es": "Cómo lo implementamos", "en": "How we implement it", "route": "services" }
+        }
+      ]
+    },
+
+    "solutions_index": {
+      "origen": "nuevo",
+      "url": { "es": "/es/soluciones", "en": "/en/solutions" },
+      "seo": {
+        "title": { "es": "Soluciones sobre HOPEX · Grupo Edima", "en": "HOPEX solutions · Grupo Edima" },
+        "meta_description": {
+          "es": "Arquitectura empresarial, portafolio de aplicaciones, procesos de negocio y gobierno, riesgo y cumplimiento, implementados sobre HOPEX para Colombia y Ecuador.",
+          "en": "Enterprise architecture, application portfolio, business processes and governance, risk and compliance, implemented on HOPEX for Colombia and Ecuador."
+        }
+      },
+      "h1": { "es": "Soluciones", "en": "Solutions" },
+      "intro": {
+        "es": "Cada solución agrupa un problema de negocio concreto y la disciplina de HOPEX que lo resuelve. Si ya sabes qué servicio necesitas —implementación, migración, soporte—, consulta Servicios; si estás definiendo qué disciplina aplica a tu caso, empieza aquí.",
+        "en": "Each solution groups a concrete business problem with the HOPEX discipline that solves it. If you already know which service you need — implementation, migration, support — see Services; if you are still working out which discipline applies to your case, start here."
+      },
+      "note": "Alcance conservador: sólo se publican las 4 disciplinas con evidencia de práctica actual en el contenido existente. Las otras 5 disciplinas del fabricante (portafolio tecnológico, arquitectura de negocio, arquitectura de soluciones, gestión estratégica de portafolios, gestión de datos) quedan fuera del sitio hasta tener proyectos que las sostengan — ver storage/migration/ANALISIS-REFERENCIA.md A5."
+    },
+
+    "services_index": {
+      "origen": "reescrito",
+      "url": { "es": "/es/servicios", "en": "/en/services" },
+      "seo": {
+        "title": { "es": "Servicios de consultoría HOPEX · Grupo Edima", "en": "HOPEX consulting services · Grupo Edima" },
+        "meta_description": {
+          "es": "Implementación, migración, personalización, soporte, formación y asesoría sobre HOPEX para organizaciones de Colombia y Ecuador.",
+          "en": "Implementation, migration, customization, support, training and advisory on HOPEX for organizations in Colombia and Ecuador."
+        }
+      },
+      "h1": { "es": "Servicios", "en": "Services" },
+      "intro": {
+        "es": "Cubrimos el ciclo completo de la plataforma. La mayoría de las organizaciones nos busca en uno de tres momentos: cuando acaba de adquirir HOPEX y necesita ponerla en operación, cuando ya la tiene pero la adopción no avanza, o cuando necesita consolidar en ella información que hoy vive en otra herramienta.",
+        "en": "We cover the full platform lifecycle. Most organizations come to us at one of three moments: right after acquiring HOPEX and needing to get it running, when they already have it but adoption has stalled, or when they need to consolidate into it information that currently lives in another tool."
+      },
+      "cta": { "es": "Solicitar una conversación técnica", "en": "Request a technical conversation", "route": "contact" }
+    },
+
+    "case_studies_index": {
+      "origen": "nuevo",
+      "url": { "es": "/es/casos-de-exito", "en": "/en/case-studies" },
+      "seo": {
+        "title": { "es": "Casos de éxito · Grupo Edima", "en": "Case studies · Grupo Edima" },
+        "meta_description": {
+          "es": "Implementaciones de HOPEX en organizaciones de Colombia y Ecuador: situación inicial, alcance, entregables y resultados.",
+          "en": "HOPEX implementations in organizations across Colombia and Ecuador: starting point, scope, deliverables and results."
+        }
+      },
+      "h1": { "es": "Casos de éxito", "en": "Case studies" },
+      "intro": {
+        "es": "Cada caso describe la situación inicial, el alcance del trabajo, los entregables y el resultado obtenido.",
+        "en": "Each case describes the starting point, the scope of work, the deliverables and the outcome."
+      },
+      "empty_state": {
+        "es": "[PENDIENTE: al menos un caso de éxito con resultado medible y autorización del cliente]",
+        "en": "[PENDIENTE: at least one case study with a measurable result and client authorization]"
+      }
+    },
+
+    "team": {
+      "origen": "nuevo",
+      "url": { "es": "/es/equipo", "en": "/en/team" },
+      "in_menu": false,
+      "note": "Fuera del menú hasta que existan perfiles reales. La ruta funciona y muestra estado vacío.",
+      "seo": {
+        "title": { "es": "Equipo · Grupo Edima", "en": "Team · Grupo Edima" },
+        "meta_description": {
+          "es": "El equipo de consultores de Grupo Edima especializado en HOPEX, arquitectura empresarial y gobierno de TI.",
+          "en": "The Grupo Edima consulting team specialized in HOPEX, enterprise architecture and IT governance."
+        }
+      },
+      "h1": { "es": "Equipo", "en": "Team" },
+      "intro": {
+        "es": "[PENDIENTE: perfiles reales con cargo, trayectoria y certificaciones]",
+        "en": "[PENDIENTE: real profiles with role, background and certifications]"
+      }
+    },
+
+    "resources_index": {
+      "origen": "nuevo",
+      "url": { "es": "/es/recursos", "en": "/en/resources" },
+      "seo": {
+        "title": { "es": "Recursos sobre HOPEX y arquitectura · Grupo Edima", "en": "HOPEX and architecture resources · Grupo Edima" },
+        "meta_description": {
+          "es": "Artículos sobre HOPEX, arquitectura empresarial, gobierno de TI y gestión de riesgo tecnológico.",
+          "en": "Articles on HOPEX, enterprise architecture, IT governance and technology risk management."
+        }
+      },
+      "h1": { "es": "Recursos", "en": "Resources" },
+      "intro": {
+        "es": "Artículos sobre arquitectura empresarial, gobierno de TI y gestión de riesgo, escritos para quienes toman estas decisiones dentro de la organización.",
+        "en": "Articles on enterprise architecture, IT governance and risk management, written for the people who make these decisions inside the organization."
+      }
+    },
+
+    "about": {
+      "origen": "reescrito",
+      "url": { "es": "/es/nosotros", "en": "/en/about-us" },
+      "seo": {
+        "title": { "es": "Sobre Grupo Edima · Consultoría HOPEX", "en": "About Grupo Edima · HOPEX consulting" },
+        "meta_description": {
+          "es": "Consultora colombiana especializada en la implementación, personalización y adopción de HOPEX para organizaciones de Colombia y Ecuador.",
+          "en": "Colombian consultancy specialized in the implementation, customization and adoption of HOPEX for organizations in Colombia and Ecuador."
+        }
+      },
+      "h1": { "es": "Sobre nosotros", "en": "About us" },
+      "subtitle": {
+        "es": "Consultora colombiana especializada en la implementación, personalización y adopción de HOPEX.",
+        "en": "A Colombian consultancy specialized in the implementation, customization and adoption of HOPEX."
+      },
+      "blocks": [
+        {
+          "id": "about_who",
+          "origen": "reescrito",
+          "heading": { "es": "Quiénes somos", "en": "Who we are" },
+          "body": {
+            "es": "Grupo Edima es una consultora colombiana dedicada a una sola plataforma: HOPEX. Esa especialización es deliberada. Trabajar sobre una única herramienta nos permite conocer su comportamiento real —sus límites, su modelo de datos, lo que conviene configurar y lo que conviene no tocar— en lugar de repartir la atención entre varias.\n\nAtendemos organizaciones grandes en Colombia y Ecuador, en español y en su mismo huso horario. [PENDIENTE: año de fundación y número de personas del equipo]",
+            "en": "Grupo Edima is a Colombian consultancy dedicated to a single platform: HOPEX. That specialization is deliberate. Working with one tool lets us understand how it actually behaves — its limits, its data model, what is worth configuring and what is better left alone — instead of spreading our attention across several.\n\nWe serve large organizations in Colombia and Ecuador, in Spanish and in their own time zone. [PENDIENTE: year founded and team size]"
+          }
+        },
+        {
+          "id": "about_mission",
+          "origen": "conservado",
+          "note": "Conserva la misión declarada en el sitio anterior, reformulada sin adjetivos sin respaldo.",
+          "heading": { "es": "Nuestra misión", "en": "Our mission" },
+          "body": {
+            "es": "Entregar soluciones basadas en HOPEX que permitan a las organizaciones optimizar su arquitectura empresarial, su gobierno de TI, su gestión de riesgos y sus iniciativas de transformación digital.",
+            "en": "To deliver HOPEX-based solutions that allow organizations to optimize their enterprise architecture, IT governance, risk management and digital transformation initiatives."
+          }
+        },
+        {
+          "id": "about_frameworks",
+          "origen": "reescrito",
+          "note": "Sustituye 'industry best practices' por los marcos concretos.",
+          "heading": { "es": "Marcos de referencia", "en": "Reference frameworks" },
+          "body": {
+            "es": "Trabajamos sobre marcos establecidos en lugar de metodologías propias sin contraste: TOGAF para el método de arquitectura, ArchiMate para el modelado, COBIT para el gobierno de TI e ISO 31000 para la gestión de riesgo. La plataforma se adapta al marco que ya usa la organización.",
+            "en": "We work with established frameworks rather than unproven in-house methodologies: TOGAF for the architecture method, ArchiMate for modeling, COBIT for IT governance and ISO 31000 for risk management. The platform adapts to the framework the organization already uses."
+          }
+        },
+        {
+          "id": "about_credentials",
+          "origen": "nuevo",
+          "published": false,
+          "heading": { "es": "Certificaciones y alianzas", "en": "Certifications and partnerships" },
+          "body": {
+            "es": "[PENDIENTE: certificaciones del equipo (HOPEX, TOGAF, ArchiMate, COBIT, ISO 31000) y denominación oficial del acuerdo de partner con el fabricante]",
+            "en": "[PENDIENTE: team certifications (HOPEX, TOGAF, ArchiMate, COBIT, ISO 31000) and the official name of the partnership agreement with the vendor]"
+          }
+        },
+        {
+          "id": "about_cta",
+          "origen": "nuevo",
+          "cta": { "es": "Hablar con el equipo", "en": "Talk to the team", "route": "contact" }
+        }
+      ]
+    },
+
+    "contact": {
+      "origen": "reescrito",
+      "url": { "es": "/es/contacto", "en": "/en/contact" },
+      "seo": {
+        "title": { "es": "Contacto · Grupo Edima", "en": "Contact · Grupo Edima" },
+        "meta_description": {
+          "es": "Escríbenos para conversar sobre la implementación, migración o adopción de HOPEX en tu organización.",
+          "en": "Get in touch to discuss the implementation, migration or adoption of HOPEX in your organization."
+        }
+      },
+      "h1": { "es": "Contacto", "en": "Contact" },
+      "subtitle": {
+        "es": "Cuéntanos en qué punto está tu organización y en qué podemos ayudarte.",
+        "en": "Tell us where your organization stands and how we can help."
+      },
+      "body": {
+        "es": "Respondemos consultas técnicas y comerciales. Si ya tienes un alcance definido, indícalo en el mensaje; si estás evaluando la plataforma, también podemos conversar sin compromiso.",
+        "en": "We answer both technical and commercial enquiries. If you already have a defined scope, mention it in your message; if you are still evaluating the platform, we are happy to talk with no commitment."
+      }
+    }
+  },
+
+  "services": [
+    {
+      "id": "service_implementacion",
+      "origen": "reescrito",
+      "order": 1,
+      "icon": "serviceicon1.png",
+      "slug": { "es": "implementacion-hopex", "en": "hopex-implementation" },
+      "name": { "es": "Implementación de HOPEX", "en": "HOPEX implementation" },
+      "seo": {
+        "title": { "es": "Implementación de HOPEX · Grupo Edima", "en": "HOPEX implementation · Grupo Edima" },
+        "meta_description": {
+          "es": "Puesta en operación de HOPEX por fases: diseño del modelo, configuración, carga validada, roles y habilitación de los equipos.",
+          "en": "Phased HOPEX rollout: model design, configuration, validated data load, roles and team enablement."
+        }
+      },
+      "summary": {
+        "es": "Ponemos HOPEX en operación con un modelo diseñado a la medida de tu marco de arquitectura y tu gobierno, hasta que los equipos lo usan.",
+        "en": "We get HOPEX running with a model designed around your architecture framework and governance, until your teams are actually using it."
+      },
+      "applies_to": {
+        "es": "Organizaciones que adquirieron HOPEX y necesitan ponerla en operación, o que van a estructurar por primera vez un repositorio de arquitectura formal.",
+        "en": "Organizations that have acquired HOPEX and need to get it running, or that are formalizing an architecture repository for the first time."
+      },
+      "method": {
+        "heading": { "es": "Cómo lo hacemos", "en": "How we do it" },
+        "phases": [
+          { "es": "Diagnóstico y diseño del modelo objetivo: alcance, marco de referencia, metamodelo y modelo de gobierno.", "en": "Assessment and target model design: scope, reference framework, metamodel and governance model." },
+          { "es": "Instalación y configuración de la plataforma en el ambiente definido.", "en": "Installation and configuration of the platform in the agreed environment." },
+          { "es": "Adaptación del metamodelo al marco de la organización (TOGAF, ArchiMate).", "en": "Adaptation of the metamodel to the organization's framework (TOGAF, ArchiMate)." },
+          { "es": "Carga inicial de información y validación con los dueños de cada dominio.", "en": "Initial data load and validation with each domain owner." },
+          { "es": "Definición de roles, permisos y flujos de revisión y aprobación.", "en": "Definition of roles, permissions and review and approval workflows." },
+          { "es": "Habilitación de los equipos y puesta en operación acompañada.", "en": "Team enablement and supported go-live." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Documento de diseño del modelo de arquitectura", "en": "Architecture model design document" },
+        { "es": "Ambiente instalado y configurado", "en": "Installed and configured environment" },
+        { "es": "Metamodelo adaptado al marco de la organización", "en": "Metamodel adapted to the organization's framework" },
+        { "es": "Repositorio con carga inicial validada", "en": "Repository with a validated initial data load" },
+        { "es": "Matriz de roles y permisos", "en": "Roles and permissions matrix" },
+        { "es": "Manual de operación y plan de adopción", "en": "Operations manual and adoption plan" }
+      ],
+      "duration": { "es": "[PENDIENTE: duración típica]", "en": "[PENDIENTE: typical duration]" },
+      "client_involvement": {
+        "es": "Arquitecto líder, responsable de TI y dueños de cada dominio de información.",
+        "en": "Lead architect, IT manager and the owners of each information domain."
+      },
+      "outcome": {
+        "es": "Un repositorio operativo, gobernado y con información validada, en uso por los equipos de arquitectura y gobierno.",
+        "en": "An operational, governed repository with validated information, in use by the architecture and governance teams."
+      },
+      "related_solutions": ["solution_arquitectura_empresarial", "solution_portafolio_aplicaciones", "solution_procesos_negocio", "solution_grc"]
+    },
+    {
+      "id": "service_migracion",
+      "origen": "reescrito",
+      "order": 2,
+      "icon": "serviceicon5.png",
+      "slug": { "es": "migracion-a-hopex", "en": "migration-to-hopex" },
+      "name": { "es": "Migración a HOPEX", "en": "Migration to HOPEX" },
+      "seo": {
+        "title": { "es": "Migración a HOPEX · Grupo Edima", "en": "Migration to HOPEX · Grupo Edima" },
+        "meta_description": {
+          "es": "Migración de repositorios de arquitectura, modelos de datos y estructuras de gobierno hacia HOPEX, con conciliación y trazabilidad.",
+          "en": "Migration of architecture repositories, data models and governance structures into HOPEX, with reconciliation and traceability."
+        }
+      },
+      "summary": {
+        "es": "Consolidamos en HOPEX la información que hoy vive en otra herramienta, en hojas de cálculo o en diagramas sueltos, sin perder trazabilidad.",
+        "en": "We consolidate into HOPEX the information that today lives in another tool, in spreadsheets or in scattered diagrams, without losing traceability."
+      },
+      "applies_to": {
+        "es": "Organizaciones con un repositorio en otra herramienta de arquitectura, o con información dispersa en hojas de cálculo y diagramas, que necesitan consolidarla.",
+        "en": "Organizations with a repository in another architecture tool, or with information scattered across spreadsheets and diagrams, that need to consolidate it."
+      },
+      "method": {
+        "heading": { "es": "Cómo lo hacemos", "en": "How we do it" },
+        "phases": [
+          { "es": "Inventario y evaluación de la información de origen: qué existe, en qué estado y qué vale la pena migrar.", "en": "Inventory and assessment of the source information: what exists, in what condition and what is worth migrating." },
+          { "es": "Mapeo entre el metamodelo de origen y el de destino, con las reglas de transformación.", "en": "Mapping between the source and target metamodels, with transformation rules." },
+          { "es": "Estrategia y plan de migración, con criterios de aceptación acordados.", "en": "Migration strategy and plan, with agreed acceptance criteria." },
+          { "es": "Migración piloto sobre un subconjunto acotado y ajuste de las reglas.", "en": "Pilot migration on a bounded subset, and refinement of the rules." },
+          { "es": "Migración completa y conciliación contra el origen.", "en": "Full migration and reconciliation against the source." },
+          { "es": "Cierre: validación con los dueños de la información y baja del repositorio anterior.", "en": "Closure: validation with information owners and decommissioning of the previous repository." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Inventario y evaluación de la información de origen", "en": "Inventory and assessment of source information" },
+        { "es": "Matriz de mapeo entre metamodelos", "en": "Metamodel mapping matrix" },
+        { "es": "Plan de migración con criterios de aceptación", "en": "Migration plan with acceptance criteria" },
+        { "es": "Informe de conciliación origen–destino", "en": "Source-to-target reconciliation report" },
+        { "es": "Repositorio migrado y validado", "en": "Migrated and validated repository" }
+      ],
+      "duration": { "es": "[PENDIENTE: duración típica]", "en": "[PENDIENTE: typical duration]" },
+      "client_involvement": {
+        "es": "Dueños de la información de origen y responsable del repositorio actual.",
+        "en": "Owners of the source information and the manager of the current repository."
+      },
+      "outcome": {
+        "es": "La información consolidada en HOPEX, conciliada contra el origen y con trazabilidad de lo que se migró, lo que se transformó y lo que se descartó.",
+        "en": "Information consolidated in HOPEX, reconciled against the source, with traceability of what was migrated, transformed and discarded."
+      },
+      "related_solutions": ["solution_portafolio_aplicaciones", "solution_arquitectura_empresarial"]
+    },
+    {
+      "id": "service_personalizacion",
+      "origen": "reescrito",
+      "order": 3,
+      "icon": "serviceicon3.png",
+      "slug": { "es": "desarrollo-y-personalizacion", "en": "development-and-customization" },
+      "name": { "es": "Desarrollo y personalización", "en": "Development and customization" },
+      "seo": {
+        "title": { "es": "Personalización de HOPEX · Grupo Edima", "en": "HOPEX customization · Grupo Edima" },
+        "meta_description": {
+          "es": "Extensiones del metamodelo, informes, tableros e integraciones sobre HOPEX, sin comprometer la ruta de actualización.",
+          "en": "Metamodel extensions, reports, dashboards and integrations on HOPEX, without compromising the upgrade path."
+        }
+      },
+      "summary": {
+        "es": "Extendemos HOPEX cuando la configuración estándar no cubre un requisito de negocio o regulatorio, cuidando que el entorno siga siendo actualizable.",
+        "en": "We extend HOPEX when the standard configuration does not cover a business or regulatory requirement, while keeping the environment upgradable."
+      },
+      "applies_to": {
+        "es": "Organizaciones con requisitos que la configuración estándar no resuelve: obligaciones regulatorias, integraciones con sistemas internos o informes propios.",
+        "en": "Organizations with requirements the standard configuration does not solve: regulatory obligations, integrations with internal systems or custom reporting."
+      },
+      "method": {
+        "heading": { "es": "Qué abarca", "en": "What it covers" },
+        "phases": [
+          { "es": "Extensiones del metamodelo para representar conceptos propios de la organización.", "en": "Metamodel extensions to represent concepts specific to the organization." },
+          { "es": "Informes y tableros a la medida de los comités que consumen la información.", "en": "Reports and dashboards tailored to the committees that consume the information." },
+          { "es": "Integraciones con CMDB, ERP, herramientas de gestión de servicios y directorio corporativo.", "en": "Integrations with CMDB, ERP, service management tools and corporate directory." },
+          { "es": "Automatización de flujos de revisión, aprobación y actualización.", "en": "Automation of review, approval and update workflows." },
+          { "es": "Reglas de validación que preservan la calidad de la información en el tiempo.", "en": "Validation rules that preserve information quality over time." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Especificación funcional y técnica", "en": "Functional and technical specification" },
+        { "es": "Componente desarrollado y desplegado", "en": "Developed and deployed component" },
+        { "es": "Pruebas y evidencia de resultados", "en": "Testing and evidence of results" },
+        { "es": "Documentación técnica y transferencia al equipo interno", "en": "Technical documentation and handover to the internal team" }
+      ],
+      "duration": { "es": "[PENDIENTE: duración típica]", "en": "[PENDIENTE: typical duration]" },
+      "client_involvement": {
+        "es": "Responsable funcional del requisito y equipo técnico de los sistemas a integrar.",
+        "en": "Functional owner of the requirement and the technical team of the systems to integrate."
+      },
+      "outcome": {
+        "es": "El requisito resuelto dentro de la plataforma y documentado, sin bloquear futuras actualizaciones de versión.",
+        "en": "The requirement solved inside the platform and documented, without blocking future version upgrades."
+      },
+      "related_solutions": ["solution_procesos_negocio", "solution_grc"]
+    },
+    {
+      "id": "service_soporte",
+      "origen": "reescrito",
+      "order": 4,
+      "icon": "serviceicon4.png",
+      "slug": { "es": "soporte-y-mantenimiento", "en": "support-and-maintenance" },
+      "name": { "es": "Soporte y mantenimiento", "en": "Support and maintenance" },
+      "seo": {
+        "title": { "es": "Soporte de HOPEX en español · Grupo Edima", "en": "HOPEX support in Spanish · Grupo Edima" },
+        "meta_description": {
+          "es": "Soporte, mantenimiento y actualizaciones de HOPEX en español, en el mismo huso horario de Colombia y Ecuador.",
+          "en": "HOPEX support, maintenance and upgrades in Spanish, in the same time zone as Colombia and Ecuador."
+        }
+      },
+      "summary": {
+        "es": "Mantenemos el entorno HOPEX en operación: atención de incidencias, mantenimiento, actualizaciones de versión y asesoría recurrente, en español.",
+        "en": "We keep the HOPEX environment running: incident handling, maintenance, version upgrades and ongoing advisory, in Spanish."
+      },
+      "applies_to": {
+        "es": "Organizaciones con HOPEX en producción que necesitan continuidad operativa y un interlocutor técnico en su mismo idioma y huso horario.",
+        "en": "Organizations running HOPEX in production that need operational continuity and a technical counterpart in their own language and time zone."
+      },
+      "method": {
+        "heading": { "es": "Qué abarca", "en": "What it covers" },
+        "phases": [
+          { "es": "Atención y resolución de incidencias sobre la plataforma.", "en": "Handling and resolution of platform incidents." },
+          { "es": "Mantenimiento correctivo y evolutivo de la configuración.", "en": "Corrective and evolutionary maintenance of the configuration." },
+          { "es": "Planeación y ejecución de actualizaciones de versión.", "en": "Planning and execution of version upgrades." },
+          { "es": "Revisión de rendimiento y optimización del entorno.", "en": "Performance review and environment optimization." },
+          { "es": "Asesoría recurrente para el equipo interno de arquitectura.", "en": "Ongoing advisory for the internal architecture team." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Canal de atención definido", "en": "Defined support channel" },
+        { "es": "Informes periódicos de atención y estado del entorno", "en": "Periodic reports on support activity and environment status" },
+        { "es": "Plan de actualización de versiones", "en": "Version upgrade plan" }
+      ],
+      "duration": { "es": "[PENDIENTE: modalidades de contratación y niveles de servicio (SLA)]", "en": "[PENDIENTE: engagement models and service levels (SLA)]" },
+      "client_involvement": {
+        "es": "Administrador de la plataforma y responsable del entorno técnico.",
+        "en": "Platform administrator and owner of the technical environment."
+      },
+      "outcome": {
+        "es": "Un entorno estable y actualizado, con las incidencias atendidas y el equipo interno respaldado.",
+        "en": "A stable, up-to-date environment, with incidents handled and the internal team backed up."
+      },
+      "related_solutions": ["solution_grc"]
+    },
+    {
+      "id": "service_formacion",
+      "origen": "reescrito",
+      "order": 5,
+      "icon": "serviceicon2.png",
+      "slug": { "es": "formacion-y-habilitacion", "en": "training-and-enablement" },
+      "name": { "es": "Formación y habilitación", "en": "Training and enablement" },
+      "seo": {
+        "title": { "es": "Formación en HOPEX y ArchiMate · Grupo Edima", "en": "HOPEX and ArchiMate training · Grupo Edima" },
+        "meta_description": {
+          "es": "Formación en HOPEX por rol, modelado con ArchiMate y gobierno del repositorio, en español y sobre tu propio entorno.",
+          "en": "Role-based HOPEX training, ArchiMate modeling and repository governance, in Spanish and on your own environment."
+        }
+      },
+      "summary": {
+        "es": "Formamos a los equipos que van a usar la plataforma, sobre tu propio repositorio y no sobre ejemplos genéricos.",
+        "en": "We train the teams who will use the platform, working on your own repository rather than generic examples."
+      },
+      "applies_to": {
+        "es": "Arquitectos, líderes de gobierno de TI, oficiales de riesgo, equipos técnicos y usuarios de negocio que alimentan o consultan el repositorio.",
+        "en": "Architects, IT governance leads, risk officers, technical teams and business users who feed or consult the repository."
+      },
+      "method": {
+        "heading": { "es": "Programas", "en": "Programs" },
+        "phases": [
+          { "es": "Uso de la plataforma según el rol de cada participante.", "en": "Platform usage according to each participant's role." },
+          { "es": "Modelado con ArchiMate: notación, niveles y errores frecuentes.", "en": "ArchiMate modeling: notation, layers and common mistakes." },
+          { "es": "Administración del entorno y gestión de permisos.", "en": "Environment administration and permission management." },
+          { "es": "Gobierno del repositorio: quién mantiene qué y con qué periodicidad.", "en": "Repository governance: who maintains what, and how often." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Material de formación en español", "en": "Training material in Spanish" },
+        { "es": "Ejercicios sobre el repositorio de la organización", "en": "Exercises based on the organization's own repository" },
+        { "es": "Evaluación de los participantes", "en": "Participant assessment" },
+        { "es": "[PENDIENTE: constancia o certificación que se emite, si aplica]", "en": "[PENDIENTE: certificate issued, if applicable]" }
+      ],
+      "duration": { "es": "[PENDIENTE: duración y formato de cada programa]", "en": "[PENDIENTE: duration and format of each program]" },
+      "client_involvement": {
+        "es": "Los equipos que usarán la plataforma y el responsable de su adopción.",
+        "en": "The teams who will use the platform and the person responsible for its adoption."
+      },
+      "outcome": {
+        "es": "Equipos capaces de mantener y consultar el repositorio sin depender de soporte externo para el trabajo cotidiano.",
+        "en": "Teams able to maintain and use the repository without relying on external support for day-to-day work."
+      },
+      "related_solutions": ["solution_arquitectura_empresarial", "solution_procesos_negocio"]
+    },
+    {
+      "id": "service_asesoria",
+      "origen": "reescrito",
+      "order": 6,
+      "icon": "serviceicon6.png",
+      "slug": { "es": "asesoria-en-arquitectura-empresarial", "en": "enterprise-architecture-advisory" },
+      "name": { "es": "Asesoría en arquitectura empresarial", "en": "Enterprise architecture advisory" },
+      "seo": {
+        "title": { "es": "Asesoría en arquitectura empresarial · Grupo Edima", "en": "Enterprise architecture advisory · Grupo Edima" },
+        "meta_description": {
+          "es": "Acompañamiento en madurez de arquitectura, gobierno de TI y racionalización de aplicaciones, apoyado en HOPEX.",
+          "en": "Advisory on architecture maturity, IT governance and application rationalization, supported by HOPEX."
+        }
+      },
+      "summary": {
+        "es": "Acompañamos las decisiones de arquitectura, no sólo la operación de la herramienta: qué racionalizar, qué priorizar y cómo gobernarlo.",
+        "en": "We support architecture decisions, not just tool operation: what to rationalize, what to prioritize and how to govern it."
+      },
+      "applies_to": {
+        "es": "Organizaciones que necesitan avanzar en madurez de arquitectura y gobierno, con o sin la plataforma ya en operación.",
+        "en": "Organizations that need to advance in architecture and governance maturity, with or without the platform already running."
+      },
+      "method": {
+        "heading": { "es": "Qué abarca", "en": "What it covers" },
+        "phases": [
+          { "es": "Definición del marco de arquitectura y su modelo de gobierno.", "en": "Definition of the architecture framework and its governance model." },
+          { "es": "Construcción del mapa de capacidades de negocio y las cadenas de valor.", "en": "Construction of the business capability map and value streams." },
+          { "es": "Racionalización del portafolio de aplicaciones con criterios explícitos.", "en": "Application portfolio rationalization with explicit criteria." },
+          { "es": "Hoja de ruta de transformación priorizada.", "en": "Prioritized transformation roadmap." },
+          { "es": "Gobierno de TI con COBIT y gestión de riesgo tecnológico con ISO 31000.", "en": "IT governance with COBIT and technology risk management with ISO 31000." }
+        ]
+      },
+      "deliverables": [
+        { "es": "Marco de arquitectura y modelo de gobierno documentados", "en": "Documented architecture framework and governance model" },
+        { "es": "Mapa de capacidades de negocio", "en": "Business capability map" },
+        { "es": "Análisis de racionalización del portafolio", "en": "Portfolio rationalization analysis" },
+        { "es": "Hoja de ruta priorizada", "en": "Prioritized roadmap" }
+      ],
+      "duration": { "es": "[PENDIENTE: duración típica por tipo de iniciativa]", "en": "[PENDIENTE: typical duration by initiative type]" },
+      "client_involvement": {
+        "es": "Dirección de TI, arquitectura empresarial y las áreas de negocio dueñas de las capacidades.",
+        "en": "IT leadership, enterprise architecture and the business areas that own the capabilities."
+      },
+      "outcome": {
+        "es": "Decisiones de portafolio y de inversión sustentadas en información del repositorio, no en percepciones.",
+        "en": "Portfolio and investment decisions grounded in repository information rather than perception."
+      },
+      "related_solutions": ["solution_arquitectura_empresarial", "solution_portafolio_aplicaciones", "solution_grc"]
+    }
+  ],
+
+  "solutions": [
+    {
+      "id": "solution_arquitectura_empresarial",
+      "origen": "nuevo",
+      "order": 1,
+      "slug": { "es": "arquitectura-empresarial", "en": "enterprise-architecture" },
+      "name": { "es": "Arquitectura empresarial", "en": "Enterprise architecture" },
+      "seo": {
+        "title": { "es": "Arquitectura empresarial con HOPEX · Grupo Edima", "en": "Enterprise architecture with HOPEX · Grupo Edima" },
+        "meta_description": {
+          "es": "Arquitectura empresarial con HOPEX: modelo de capacidades, hoja de ruta y gobierno conectados con las decisiones de inversión de TI.",
+          "en": "Enterprise architecture with HOPEX: capability model, transformation roadmap and governance connected to IT investment decisions."
+        }
+      },
+      "intro": {
+        "es": "Un modelo de arquitectura empresarial conecta la estrategia con la ejecución: qué capacidades sostienen el negocio, qué aplicaciones y tecnología las soportan, y qué hay que cambiar para llegar al estado que la organización busca. Sin ese modelo, las decisiones de inversión y transformación se toman con información parcial.",
+        "en": "An enterprise architecture model connects strategy with execution: which capabilities sustain the business, which applications and technology support them, and what needs to change to reach the state the organization is aiming for. Without that model, investment and transformation decisions are made on partial information."
+      },
+      "questions": {
+        "heading": { "es": "Preguntas que permite responder", "en": "Questions it helps answer" },
+        "items": [
+          { "es": "Qué capacidades del negocio dependen de una aplicación o sistema en particular.", "en": "Which business capabilities depend on a particular application or system." },
+          { "es": "Qué iniciativas del portafolio de proyectos compiten por la misma capacidad.", "en": "Which project portfolio initiatives compete for the same capability." },
+          { "es": "Dónde hay redundancia entre lo que existe y lo que pide la estrategia.", "en": "Where there is redundancy between what exists and what the strategy calls for." },
+          { "es": "Qué arquitectura objetivo sostiene una decisión de transformación concreta, y en qué orden ejecutarla.", "en": "Which target architecture supports a given transformation decision, and in what order to execute it." }
+        ]
+      },
+      "how_we_implement": {
+        "heading": { "es": "Cómo lo implementamos", "en": "How we implement it" },
+        "body": {
+          "es": "Configuramos el repositorio de arquitectura sobre el marco que tu organización ya usa o va a adoptar —normalmente TOGAF para el método y ArchiMate para el modelado— y lo ajustamos a tu ciclo de decisión: comités de arquitectura, oficina de proyectos, gobierno de inversión. El repositorio se entrega en español, con los equipos locales habilitados para mantenerlo sin depender de soporte externo para el trabajo cotidiano.",
+          "en": "We configure the architecture repository around the framework your organization already uses or is adopting — typically TOGAF for the method and ArchiMate for modeling — and adapt it to your decision cycle: architecture committees, project office, investment governance. The repository is delivered in Spanish, with local teams enabled to maintain it without relying on external support for day-to-day work."
+        }
+      },
+      "related_services": ["service_implementacion", "service_asesoria", "service_formacion"],
+      "cta": { "es": "Evaluar arquitectura empresarial para tu organización", "en": "Evaluate enterprise architecture for your organization", "route": "contact" }
+    },
+    {
+      "id": "solution_portafolio_aplicaciones",
+      "origen": "nuevo",
+      "order": 2,
+      "slug": { "es": "portafolio-de-aplicaciones", "en": "application-portfolio" },
+      "name": { "es": "Portafolio de aplicaciones", "en": "Application portfolio" },
+      "seo": {
+        "title": { "es": "Portafolio de aplicaciones con HOPEX · Grupo Edima", "en": "Application portfolio with HOPEX · Grupo Edima" },
+        "meta_description": {
+          "es": "Inventario y racionalización del portafolio de aplicaciones sobre HOPEX: qué se conserva, qué se integra y qué se retira, con criterio documentado.",
+          "en": "Application portfolio inventory and rationalization on HOPEX: what to keep, integrate or retire, with documented criteria."
+        }
+      },
+      "intro": {
+        "es": "El portafolio de aplicaciones de una organización grande rara vez es un problema de cantidad; es un problema de visibilidad. Sin un inventario centralizado y actualizado, es difícil saber qué aplicación sostiene qué proceso, dónde hay solapamiento y qué conviene retirar antes de invertir en algo nuevo.",
+        "en": "The application portfolio of a large organization is rarely a problem of quantity; it is a problem of visibility. Without a centralized, up-to-date inventory, it is hard to know which application supports which process, where there is overlap, and what should be retired before investing in something new."
+      },
+      "questions": {
+        "heading": { "es": "Preguntas que permite responder", "en": "Questions it helps answer" },
+        "items": [
+          { "es": "Qué aplicaciones están duplicadas o resuelven la misma función.", "en": "Which applications are duplicated or solve the same function." },
+          { "es": "Qué aplicaciones sostienen procesos críticos y cuáles no tienen dueño claro.", "en": "Which applications support critical processes, and which have no clear owner." },
+          { "es": "Qué aplicaciones conviene retirar, consolidar o modernizar, y en qué orden.", "en": "Which applications should be retired, consolidated or modernized, and in what order." },
+          { "es": "Qué riesgo técnico u obsolescencia concentra el portafolio actual.", "en": "Where the current portfolio concentrates technical risk or obsolescence." }
+        ]
+      },
+      "how_we_implement": {
+        "heading": { "es": "Cómo lo implementamos", "en": "How we implement it" },
+        "body": {
+          "es": "Cargamos y validamos el inventario de aplicaciones con los dueños de cada dominio, lo relacionamos con las capacidades de negocio y los procesos que soporta, y dejamos criterios explícitos de racionalización, no una lista de aplicaciones sin contexto de decisión. El resultado se entrega en español y queda disponible para los comités que aprueban inversión.",
+          "en": "We load and validate the application inventory with each domain owner, relate it to the business capabilities and processes it supports, and leave explicit rationalization criteria — not a list of applications without decision context. The result is delivered in Spanish and made available to the committees that approve investment."
+        }
+      },
+      "related_services": ["service_migracion", "service_implementacion", "service_asesoria"],
+      "cta": { "es": "Evaluar el portafolio de aplicaciones de tu organización", "en": "Evaluate your organization's application portfolio", "route": "contact" }
+    },
+    {
+      "id": "solution_procesos_negocio",
+      "origen": "nuevo",
+      "order": 3,
+      "slug": { "es": "procesos-de-negocio", "en": "business-processes" },
+      "name": { "es": "Procesos de negocio", "en": "Business processes" },
+      "seo": {
+        "title": { "es": "Gestión de procesos de negocio con HOPEX · Grupo Edima", "en": "Business process management with HOPEX · Grupo Edima" },
+        "meta_description": {
+          "es": "Modelado y optimización de procesos de negocio sobre HOPEX, conectados con las capacidades y sistemas que los soportan.",
+          "en": "Business process modeling and optimization on HOPEX, connected to the capabilities and systems that support them."
+        }
+      },
+      "intro": {
+        "es": "Un proceso documentado en un diagrama aislado sirve poco si nadie lo conecta con la capacidad de negocio que ejecuta o con las aplicaciones que lo soportan. Modelar procesos dentro del mismo repositorio de arquitectura permite verlo en contexto: qué lo ejecuta, qué lo sostiene y dónde se puede optimizar.",
+        "en": "A process documented in an isolated diagram is of little use if nobody connects it to the business capability it executes or the applications that support it. Modeling processes within the same architecture repository allows it to be seen in context: what executes it, what sustains it and where it can be optimized."
+      },
+      "questions": {
+        "heading": { "es": "Preguntas que permite responder", "en": "Questions it helps answer" },
+        "items": [
+          { "es": "Qué procesos soportan cada capacidad de negocio, y con qué eficiencia.", "en": "Which processes support each business capability, and how efficiently." },
+          { "es": "Dónde hay pasos redundantes o manuales que podrían automatizarse.", "en": "Where there are redundant or manual steps that could be automated." },
+          { "es": "Qué aplicaciones intervienen en cada proceso, y qué pasa si una falla.", "en": "Which applications are involved in each process, and what happens if one fails." },
+          { "es": "Qué procesos son críticos para el cumplimiento regulatorio.", "en": "Which processes are critical for regulatory compliance." }
+        ]
+      },
+      "how_we_implement": {
+        "heading": { "es": "Cómo lo implementamos", "en": "How we implement it" },
+        "body": {
+          "es": "Modelamos los procesos con notación estándar (BPMN o ArchiMate, según el marco de la organización), los conectamos con las capacidades y aplicaciones ya cargadas en el repositorio, y dejamos el modelo en manos del equipo que lo va a mantener, con la notación explicada en español.",
+          "en": "We model processes using standard notation (BPMN or ArchiMate, depending on the organization's framework), connect them to the capabilities and applications already loaded in the repository, and hand the model over to the team that will maintain it, with the notation explained in Spanish."
+        }
+      },
+      "related_services": ["service_implementacion", "service_personalizacion", "service_formacion"],
+      "cta": { "es": "Modelar los procesos de tu organización en HOPEX", "en": "Model your organization's processes in HOPEX", "route": "contact" }
+    },
+    {
+      "id": "solution_grc",
+      "origen": "nuevo",
+      "order": 4,
+      "slug": { "es": "gobierno-riesgo-y-cumplimiento", "en": "governance-risk-and-compliance" },
+      "name": { "es": "Gobierno, riesgo y cumplimiento", "en": "Governance, risk and compliance" },
+      "seo": {
+        "title": { "es": "Gobierno, riesgo y cumplimiento con HOPEX · Grupo Edima", "en": "Governance, risk and compliance with HOPEX · Grupo Edima" },
+        "meta_description": {
+          "es": "Gestión de riesgo tecnológico y cumplimiento sobre HOPEX, con el repositorio de arquitectura como fuente única de evidencia para auditoría.",
+          "en": "Technology risk and compliance management on HOPEX, with the architecture repository as a single source of audit evidence."
+        }
+      },
+      "intro": {
+        "es": "El gobierno de TI, la gestión de riesgo tecnológico y el cumplimiento normativo suelen vivir en herramientas separadas de la arquitectura, lo que obliga a reconstruir la evidencia a mano cada vez que hay una auditoría o un incidente. Integrar estos tres frentes al mismo repositorio permite trazar un riesgo hasta el proceso, la aplicación o el activo tecnológico del que depende.",
+        "en": "IT governance, technology risk management and regulatory compliance usually live in tools separate from the architecture, which forces evidence to be rebuilt by hand every time there is an audit or an incident. Integrating these three areas into the same repository makes it possible to trace a risk back to the process, application or technology asset it depends on."
+      },
+      "questions": {
+        "heading": { "es": "Preguntas que permite responder", "en": "Questions it helps answer" },
+        "items": [
+          { "es": "Qué riesgos tecnológicos están asociados a cada proceso o sistema crítico.", "en": "Which technology risks are associated with each critical process or system." },
+          { "es": "Qué controles de cumplimiento cubren cada riesgo, y cuáles tienen brechas.", "en": "Which compliance controls cover each risk, and where the gaps are." },
+          { "es": "Quién es responsable de cada riesgo y con qué frecuencia se revisa.", "en": "Who is responsible for each risk and how often it is reviewed." },
+          { "es": "Qué evidencia hay disponible para sustentar una auditoría.", "en": "What evidence is available to support an audit." }
+        ]
+      },
+      "how_we_implement": {
+        "heading": { "es": "Cómo lo implementamos", "en": "How we implement it" },
+        "body": {
+          "es": "Configuramos la estructura de riesgo y control sobre ISO 31000 y COBIT y la conectamos con el resto del repositorio: procesos, aplicaciones y capacidades. El resultado es un registro de riesgo gobernado, no una hoja de cálculo paralela, con los responsables y la periodicidad de revisión definidos junto con tu equipo de riesgo y cumplimiento.",
+          "en": "We configure the risk and control structure around ISO 31000 and COBIT and connect it to the rest of the repository: processes, applications and capabilities. The result is a governed risk register, not a parallel spreadsheet, with owners and review frequency defined together with your risk and compliance team."
+        }
+      },
+      "related_services": ["service_asesoria", "service_implementacion", "service_soporte"],
+      "cta": { "es": "Conversar sobre gobierno, riesgo y cumplimiento", "en": "Talk about governance, risk and compliance", "route": "contact" }
+    }
+  ],
+
+  "case_study_template": {
+    "origen": "nuevo",
+    "note": "Plantilla vacía. Los campos sin dato se ocultan al renderizar.",
+    "fields": [
+      { "key": "sector", "label": { "es": "Sector", "en": "Industry" }, "value": null },
+      { "key": "organization_profile", "label": { "es": "Perfil de la organización", "en": "Organization profile" }, "value": null },
+      { "key": "starting_point", "label": { "es": "Situación inicial", "en": "Starting point" }, "value": null },
+      { "key": "scope", "label": { "es": "Alcance", "en": "Scope" }, "value": null },
+      { "key": "hopex_modules", "label": { "es": "Módulos de HOPEX", "en": "HOPEX modules" }, "value": null },
+      { "key": "frameworks", "label": { "es": "Marcos aplicados", "en": "Frameworks applied" }, "value": null },
+      { "key": "duration", "label": { "es": "Duración", "en": "Duration" }, "value": null },
+      { "key": "team", "label": { "es": "Equipo", "en": "Team" }, "value": null },
+      { "key": "deliverables", "label": { "es": "Entregables", "en": "Deliverables" }, "value": null },
+      { "key": "results", "label": { "es": "Resultados medibles", "en": "Measurable results" }, "value": null },
+      { "key": "quote", "label": { "es": "Cita del cliente", "en": "Client quote" }, "value": null },
+      { "key": "related_services", "label": { "es": "Servicios relacionados", "en": "Related services" }, "value": null }
+    ]
+  },
+
+  "resources_proposed": {
+    "origen": "nuevo",
+    "note": "Cargados como borradores sin publicar.",
+    "items": [
+      { "es": "Qué es HOPEX y para qué sirve en una organización grande", "en": "What HOPEX is and what it is for in a large organization", "intent": "informativa", "audience": "CIO, arquitectura" },
+      { "es": "Cuánto dura realmente una implementación de HOPEX (y de qué depende)", "en": "How long a HOPEX implementation really takes (and what it depends on)", "intent": "informativa", "audience": "CIO, arquitectura" },
+      { "es": "Cómo justificar ante el comité la inversión en una herramienta de arquitectura empresarial", "en": "How to justify enterprise architecture tooling to the executive committee", "intent": "evaluación", "audience": "CIO" },
+      { "es": "Racionalización de aplicaciones: qué se conserva, qué se integra y qué se retira", "en": "Application rationalization: what to keep, integrate or retire", "intent": "informativa", "audience": "arquitectura, gobierno de TI" },
+      { "es": "TOGAF, ArchiMate y HOPEX: qué aporta cada uno y dónde se confunden", "en": "TOGAF, ArchiMate and HOPEX: what each contributes and where they get confused", "intent": "informativa", "audience": "arquitectura" },
+      { "es": "Errores frecuentes al migrar un repositorio de arquitectura a HOPEX", "en": "Common mistakes when migrating an architecture repository to HOPEX", "intent": "informativa", "audience": "arquitectura" },
+      { "es": "Cómo estructurar un mapa de capacidades de negocio que el negocio use", "en": "How to build a business capability map the business will actually use", "intent": "informativa", "audience": "arquitectura, negocio" },
+      { "es": "Gobierno de TI con COBIT sobre HOPEX: del marco al control operativo", "en": "IT governance with COBIT on HOPEX: from framework to operational control", "intent": "informativa", "audience": "gobierno de TI" },
+      { "es": "Gestión de riesgo tecnológico con ISO 31000 dentro de HOPEX", "en": "Technology risk management with ISO 31000 inside HOPEX", "intent": "informativa", "audience": "riesgo y cumplimiento" },
+      { "es": "Qué pedirle a un implementador de HOPEX antes de firmar", "en": "What to ask a HOPEX implementer before signing", "intent": "evaluación", "audience": "CIO, compras" }
+    ]
+  },
+
+  "conversion": {
+    "origen": "nuevo",
+    "note": "En el sitio anterior los 14 botones apuntaban a href=\"\".",
+    "map": [
+      { "page": "home", "primary": { "label": { "es": "Conversemos sobre tu arquitectura", "en": "Let's talk about your architecture" }, "route": "contact" }, "secondary": { "label": { "es": "Ver servicios", "en": "View services" }, "route": "services" } },
+      { "page": "services_index", "primary": { "label": { "es": "Solicitar una conversación técnica", "en": "Request a technical conversation" }, "route": "contact" }, "secondary": null },
+      { "page": "service_detail", "primary": { "label": { "es": "Solicitar propuesta", "en": "Request a proposal" }, "route": "contact", "query": "servicio={slug}" }, "secondary": { "label": { "es": "Ver casos relacionados", "en": "View related cases" }, "route": "projects" } },
+      { "page": "hopex", "primary": { "label": { "es": "Evaluar HOPEX para tu organización", "en": "Evaluate HOPEX for your organization" }, "route": "contact" }, "secondary": { "label": { "es": "Cómo lo implementamos", "en": "How we implement it" }, "route": "services" } },
+      { "page": "case_study", "primary": { "label": { "es": "Conversemos sobre un caso similar", "en": "Let's talk about a similar case" }, "route": "contact" }, "secondary": null },
+      { "page": "about", "primary": { "label": { "es": "Hablar con el equipo", "en": "Talk to the team" }, "route": "contact" }, "secondary": null },
+      { "page": "resource", "primary": { "label": { "es": "Conversemos sobre esto", "en": "Let's talk about this" }, "route": "contact" }, "secondary": null }
+    ]
+  },
+
+  "pending": [
+    { "priority": 1, "item": "Autorización escrita de uso de marca de cada logo de cliente", "blocks": "home.clients" },
+    { "priority": 2, "item": "Nivel de partnership y nomenclatura oficial del fabricante", "blocks": "home.hero, about.about_credentials" },
+    { "priority": 3, "item": "Al menos un caso de éxito con resultado medible", "blocks": "case_studies_index" },
+    { "priority": 4, "item": "Certificaciones del equipo y perfiles reales", "blocks": "about.about_credentials, team" },
+    { "priority": 5, "item": "Duración típica de cada servicio", "blocks": "services[].duration" },
+    { "priority": 6, "item": "Cifras reales: implementaciones, organizaciones, horas de formación, año de fundación", "blocks": "home.facts, about.about_who" },
+    { "priority": 7, "item": "Modalidades de contratación y SLA de soporte", "blocks": "service_soporte.duration" },
+    { "priority": 8, "item": "Módulos de HOPEX implementados y versiones soportadas", "blocks": "hopex.hopex_modules" },
+    { "priority": 9, "item": "URLs reales de perfiles sociales", "blocks": "site_settings.social_links" },
+    { "priority": 10, "item": "Evidencia de práctica en portafolio tecnológico, arquitectura de negocio, arquitectura de soluciones, gestión estratégica de portafolios o gestión de datos, para publicar su página de Solución (hoy fuera de mapa por decisión conservadora — ver ANALISIS-REFERENCIA.md A5)", "blocks": "solutions[]" }
+  ]
+}

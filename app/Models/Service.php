@@ -58,4 +58,14 @@ class Service extends Model implements HasMedia
     {
         return $this->belongsToMany(Project::class);
     }
+
+    /**
+     * Soluciones (disciplinas de HOPEX) que típicamente involucran este servicio.
+     *
+     * @return BelongsToMany<Solution, $this>
+     */
+    public function solutions(): BelongsToMany
+    {
+        return $this->belongsToMany(Solution::class);
+    }
 }

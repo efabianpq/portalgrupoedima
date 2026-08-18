@@ -27,11 +27,11 @@ class ProjectResource extends Resource
 
     protected static ?string $navigationGroup = 'Contenido del sitio';
 
-    protected static ?string $navigationLabel = 'Proyectos';
+    protected static ?string $navigationLabel = 'Casos de éxito';
 
-    protected static ?string $modelLabel = 'proyecto';
+    protected static ?string $modelLabel = 'caso de éxito';
 
-    protected static ?string $pluralModelLabel = 'proyectos';
+    protected static ?string $pluralModelLabel = 'casos de éxito';
 
     protected static ?int $navigationSort = 2;
 
@@ -119,7 +119,9 @@ class ProjectResource extends Resource
         return [
             'index' => Pages\ListProjects::route('/'),
             'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit'),
+            // Ver la nota equivalente en ServiceResource::getPages(): ":id"
+            // evita el 404 al hacer clic en "Editar" desde la tabla.
+            'edit' => Pages\EditProject::route('/{record:id}/edit'),
         ];
     }
 }

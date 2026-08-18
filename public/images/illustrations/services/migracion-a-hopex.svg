@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2F6F7"/>
+      <stop offset="1" stop-color="#DDEAEE"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+
+  <!-- Origen: nodos dispersos -->
+  <g fill="#0A7CB8" fill-opacity="0.85">
+    <circle cx="90" cy="110" r="9"/>
+    <circle cx="70" cy="160" r="7"/>
+    <circle cx="110" cy="190" r="6"/>
+    <circle cx="80" cy="210" r="5"/>
+  </g>
+
+  <!-- Flujo de migración -->
+  <path d="M130 160 C 190 160, 210 160, 270 150" fill="none" stroke="#046380" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <path d="M258 138 L272 150 L258 164" fill="none" stroke="#046380" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Destino: repositorio consolidado -->
+  <rect x="280" y="110" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#046380" stroke-width="4"/>
+  <circle cx="320" cy="150" r="8" fill="#FAA92E"/>
+  <path d="M296 174 L344 174" stroke="#046380" stroke-width="4" stroke-linecap="round"/>
+</svg>
